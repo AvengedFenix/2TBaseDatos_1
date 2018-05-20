@@ -2,8 +2,12 @@
 import java.awt.Color;
 import static java.awt.Color.black;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JComponent;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
@@ -51,6 +55,28 @@ public class GUI extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jPanel13 = new javax.swing.JPanel();
         jTextField3 = new javax.swing.JTextField();
+        jd_tabacoList = new javax.swing.JDialog();
+        jd_fabricaList = new javax.swing.JDialog();
+        jd_expendioList = new javax.swing.JDialog();
+        jd_almacenList = new javax.swing.JDialog();
+        jd_pedidoList = new javax.swing.JDialog();
+        jd_ventaList = new javax.swing.JDialog();
+        jd_tabacoAdd = new javax.swing.JDialog();
+        jPanel14 = new javax.swing.JPanel();
+        jd_fabricaAdd = new javax.swing.JDialog();
+        jPanel15 = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField5 = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
+        jd_expendioAdd = new javax.swing.JDialog();
+        jd_almacenAdd = new javax.swing.JDialog();
+        jPanel16 = new javax.swing.JPanel();
+        jd_pedidoAdd = new javax.swing.JDialog();
+        jd_ventaAdd = new javax.swing.JDialog();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
@@ -229,6 +255,233 @@ public class GUI extends javax.swing.JFrame {
             .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        javax.swing.GroupLayout jd_tabacoListLayout = new javax.swing.GroupLayout(jd_tabacoList.getContentPane());
+        jd_tabacoList.getContentPane().setLayout(jd_tabacoListLayout);
+        jd_tabacoListLayout.setHorizontalGroup(
+            jd_tabacoListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jd_tabacoListLayout.setVerticalGroup(
+            jd_tabacoListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jd_fabricaListLayout = new javax.swing.GroupLayout(jd_fabricaList.getContentPane());
+        jd_fabricaList.getContentPane().setLayout(jd_fabricaListLayout);
+        jd_fabricaListLayout.setHorizontalGroup(
+            jd_fabricaListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jd_fabricaListLayout.setVerticalGroup(
+            jd_fabricaListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jd_expendioListLayout = new javax.swing.GroupLayout(jd_expendioList.getContentPane());
+        jd_expendioList.getContentPane().setLayout(jd_expendioListLayout);
+        jd_expendioListLayout.setHorizontalGroup(
+            jd_expendioListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jd_expendioListLayout.setVerticalGroup(
+            jd_expendioListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jd_almacenListLayout = new javax.swing.GroupLayout(jd_almacenList.getContentPane());
+        jd_almacenList.getContentPane().setLayout(jd_almacenListLayout);
+        jd_almacenListLayout.setHorizontalGroup(
+            jd_almacenListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jd_almacenListLayout.setVerticalGroup(
+            jd_almacenListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jd_pedidoListLayout = new javax.swing.GroupLayout(jd_pedidoList.getContentPane());
+        jd_pedidoList.getContentPane().setLayout(jd_pedidoListLayout);
+        jd_pedidoListLayout.setHorizontalGroup(
+            jd_pedidoListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jd_pedidoListLayout.setVerticalGroup(
+            jd_pedidoListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jd_ventaListLayout = new javax.swing.GroupLayout(jd_ventaList.getContentPane());
+        jd_ventaList.getContentPane().setLayout(jd_ventaListLayout);
+        jd_ventaListLayout.setHorizontalGroup(
+            jd_ventaListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jd_ventaListLayout.setVerticalGroup(
+            jd_ventaListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        jPanel14.setBorder(halfBorder);
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 376, Short.MAX_VALUE)
+        );
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 276, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jd_tabacoAddLayout = new javax.swing.GroupLayout(jd_tabacoAdd.getContentPane());
+        jd_tabacoAdd.getContentPane().setLayout(jd_tabacoAddLayout);
+        jd_tabacoAddLayout.setHorizontalGroup(
+            jd_tabacoAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_tabacoAddLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jd_tabacoAddLayout.setVerticalGroup(
+            jd_tabacoAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_tabacoAddLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jPanel15.setBorder(halfBorder);
+
+        jLabel14.setText("ID Fabricante");
+
+        jLabel15.setText("Cantidad Tabaco");
+
+        jLabel16.setText("Pais");
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/round_add_box_white_48dp.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
+        jPanel15.setLayout(jPanel15Layout);
+        jPanel15Layout.setHorizontalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel15)
+                    .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(159, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25))
+        );
+        jPanel15Layout.setVerticalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addGap(85, 85, 85)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel14)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel15)
+                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout jd_fabricaAddLayout = new javax.swing.GroupLayout(jd_fabricaAdd.getContentPane());
+        jd_fabricaAdd.getContentPane().setLayout(jd_fabricaAddLayout);
+        jd_fabricaAddLayout.setHorizontalGroup(
+            jd_fabricaAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_fabricaAddLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jd_fabricaAddLayout.setVerticalGroup(
+            jd_fabricaAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_fabricaAddLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout jd_expendioAddLayout = new javax.swing.GroupLayout(jd_expendioAdd.getContentPane());
+        jd_expendioAdd.getContentPane().setLayout(jd_expendioAddLayout);
+        jd_expendioAddLayout.setHorizontalGroup(
+            jd_expendioAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jd_expendioAddLayout.setVerticalGroup(
+            jd_expendioAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        jPanel16.setBorder(halfBorder);
+
+        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
+        jPanel16.setLayout(jPanel16Layout);
+        jPanel16Layout.setHorizontalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 376, Short.MAX_VALUE)
+        );
+        jPanel16Layout.setVerticalGroup(
+            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 276, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jd_almacenAddLayout = new javax.swing.GroupLayout(jd_almacenAdd.getContentPane());
+        jd_almacenAdd.getContentPane().setLayout(jd_almacenAddLayout);
+        jd_almacenAddLayout.setHorizontalGroup(
+            jd_almacenAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_almacenAddLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jd_almacenAddLayout.setVerticalGroup(
+            jd_almacenAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_almacenAddLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout jd_pedidoAddLayout = new javax.swing.GroupLayout(jd_pedidoAdd.getContentPane());
+        jd_pedidoAdd.getContentPane().setLayout(jd_pedidoAddLayout);
+        jd_pedidoAddLayout.setHorizontalGroup(
+            jd_pedidoAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jd_pedidoAddLayout.setVerticalGroup(
+            jd_pedidoAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jd_ventaAddLayout = new javax.swing.GroupLayout(jd_ventaAdd.getContentPane());
+        jd_ventaAdd.getContentPane().setLayout(jd_ventaAddLayout);
+        jd_ventaAddLayout.setHorizontalGroup(
+            jd_ventaAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jd_ventaAddLayout.setVerticalGroup(
+            jd_ventaAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel2.setBorder(fullBorder);
@@ -267,9 +520,14 @@ public class GUI extends javax.swing.JFrame {
 
         jButton4.setBackground(new java.awt.Color(255, 153, 6));
         jButton4.setForeground(new java.awt.Color(255, 153, 6));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/round_format_list_bulleted_white_48dp.png"))); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/round_format_list_bulleted_white_48dp.png"))); // NOI18N
         jButton4.setBorderPainted(false);
         jButton4.setFocusPainted(false);
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -320,9 +578,14 @@ public class GUI extends javax.swing.JFrame {
 
         jButton6.setBackground(new java.awt.Color(78, 181, 81));
         jButton6.setForeground(new java.awt.Color(78, 181, 81));
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/round_format_list_bulleted_white_48dp.png"))); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/round_format_list_bulleted_white_48dp.png"))); // NOI18N
         jButton6.setBorderPainted(false);
         jButton6.setFocusPainted(false);
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -361,9 +624,14 @@ public class GUI extends javax.swing.JFrame {
 
         jButton9.setBackground(new java.awt.Color(26, 186, 209));
         jButton9.setForeground(new java.awt.Color(26, 186, 209));
-        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/round_format_list_bulleted_white_48dp.png"))); // NOI18N
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/round_format_list_bulleted_white_48dp.png"))); // NOI18N
         jButton9.setBorderPainted(false);
         jButton9.setFocusPainted(false);
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
 
         jButton10.setBackground(new java.awt.Color(26, 186, 209));
         jButton10.setForeground(new java.awt.Color(26, 186, 209));
@@ -424,9 +692,14 @@ public class GUI extends javax.swing.JFrame {
 
         jButton12.setBackground(new java.awt.Color(161, 56, 184));
         jButton12.setForeground(new java.awt.Color(161, 56, 184));
-        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/round_format_list_bulleted_white_48dp.png"))); // NOI18N
+        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/round_format_list_bulleted_white_48dp.png"))); // NOI18N
         jButton12.setBorderPainted(false);
         jButton12.setFocusPainted(false);
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -465,9 +738,14 @@ public class GUI extends javax.swing.JFrame {
 
         jButton7.setBackground(new java.awt.Color(226, 67, 51));
         jButton7.setForeground(new java.awt.Color(226, 67, 51));
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/round_format_list_bulleted_white_48dp.png"))); // NOI18N
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/round_format_list_bulleted_white_48dp.png"))); // NOI18N
         jButton7.setBorderPainted(false);
         jButton7.setFocusPainted(false);
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
         jButton8.setBackground(new java.awt.Color(226, 67, 51));
         jButton8.setForeground(new java.awt.Color(226, 67, 51));
@@ -517,9 +795,14 @@ public class GUI extends javax.swing.JFrame {
 
         jButton13.setBackground(new java.awt.Color(0, 153, 153));
         jButton13.setForeground(new java.awt.Color(0, 153, 153));
-        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/round_format_list_bulleted_white_48dp.png"))); // NOI18N
+        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/round_format_list_bulleted_white_48dp.png"))); // NOI18N
         jButton13.setBorderPainted(false);
         jButton13.setFocusPainted(false);
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
 
         jButton14.setBackground(new java.awt.Color(0, 153, 153));
         jButton14.setForeground(new java.awt.Color(0, 153, 153));
@@ -710,26 +993,45 @@ public class GUI extends javax.swing.JFrame {
         jd_login.pack();
         jd_login.setVisible(true);
 
+//        jd_tabacoAdd.setLocationRelativeTo(null);
+//        jd_tabacoAdd.pack();
+//        jd_tabacoAdd.setVisible(true);
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+        jd_fabricaAdd.setLocationRelativeTo(null);
+        jd_fabricaAdd.pack();
+        jd_fabricaAdd.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
+        jd_expendioAdd.setLocationRelativeTo(null);
+        jd_expendioAdd.pack();
+        jd_expendioAdd.setVisible(true);
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
+        jd_expendioAdd.setLocationRelativeTo(null);
+        jd_expendioAdd.pack();
+        jd_expendioAdd.setVisible(true);
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         // TODO add your handling code here:
+        jd_pedidoAdd.setLocationRelativeTo(null);
+        jd_pedidoAdd.pack();
+        jd_pedidoAdd.setVisible(true);
     }//GEN-LAST:event_jButton11ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
         // TODO add your handling code here:
+        jd_ventaAdd.setLocationRelativeTo(null);
+        jd_ventaAdd.pack();
+        jd_ventaAdd.setVisible(true);
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -741,12 +1043,59 @@ public class GUI extends javax.swing.JFrame {
         this.setVisible(true);
         jd_login.setVisible(false);
         jd_login.dispose();
+        try {
+            databaseCon = DriverManager.getConnection("jdbc:oracle:oci8:@localhost:1521:orcl", "user2", "user2");
+        } catch (SQLException ex) {
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
         JOptionPane.showMessageDialog(this, "Conectado con éxito");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        jd_tabacoList.setLocationRelativeTo(null);
+        jd_tabacoList.pack();
+        jd_tabacoList.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        // TODO add your handling code here:
+        jd_fabricaList.setLocationRelativeTo(null);
+        jd_fabricaList.pack();
+        jd_fabricaList.setVisible(true);
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        jd_expendioList.setLocationRelativeTo(null);
+        jd_expendioList.pack();
+        jd_expendioList.setVisible(true);
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+        jd_almacenList.setLocationRelativeTo(null);
+        jd_almacenList.pack();
+        jd_almacenList.setVisible(true);
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // TODO add your handling code here:
+        jd_pedidoList.setLocationRelativeTo(null);
+        jd_pedidoList.pack();
+        jd_pedidoList.setVisible(true);
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        // TODO add your handling code here:
+        jd_ventaList.setLocationRelativeTo(null);
+        jd_ventaList.pack();
+        jd_ventaList.setVisible(true);
+    }//GEN-LAST:event_jButton13ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -798,6 +1147,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -810,6 +1160,9 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -823,6 +1176,9 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -832,12 +1188,28 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JDialog jd_almacenAdd;
+    private javax.swing.JDialog jd_almacenList;
+    private javax.swing.JDialog jd_expendioAdd;
+    private javax.swing.JDialog jd_expendioList;
+    private javax.swing.JDialog jd_fabricaAdd;
+    private javax.swing.JDialog jd_fabricaList;
     private static javax.swing.JDialog jd_login;
+    private javax.swing.JDialog jd_pedidoAdd;
+    private javax.swing.JDialog jd_pedidoList;
+    private javax.swing.JDialog jd_tabacoAdd;
+    private javax.swing.JDialog jd_tabacoList;
+    private javax.swing.JDialog jd_ventaAdd;
+    private javax.swing.JDialog jd_ventaList;
     // End of variables declaration//GEN-END:variables
     DropShadowBorder border = new DropShadowBorder();
     Color c = new Color(0, 0, 0);
     DropShadowBorder fullBorder = new DropShadowBorder(Color.BLACK, 0, 11, .2f, 16, true, true, true, true);
+    DropShadowBorder halfBorder = new DropShadowBorder(Color.BLACK, 0, 11, .2f, 16, false, false, true, true);
 
     Connection databaseCon = null;
     Statement databaseState = null;

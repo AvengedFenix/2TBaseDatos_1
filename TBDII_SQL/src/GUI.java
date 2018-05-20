@@ -4,13 +4,17 @@ import static java.awt.Color.black;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JComponent;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import javax.swing.UIManager;
+import javax.swing.table.DefaultTableModel;
 import mdlaf.DropShadowBorder;
 import mdlaf.MaterialLookAndFeel;
 import mdlaf.MaterialUIMovement;
@@ -2427,14 +2431,46 @@ public class GUI extends javax.swing.JFrame {
 
     private void bt_showListTabacoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_showListTabacoActionPerformed
         // TODO add your handling code here:
-        jd_tabacoList.pack();
-        jd_tabacoList.setVisible(true);
+        
+        ResultSet rs;
+        JTable jt_list = null;
+        try {
+            rs = databaseState.executeQuery("select * from Cigarrillos");
+            // It creates and displays the table
+            jt_list = new JTable(buildTableModel(rs));
+        } catch (SQLException ex) {
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        // Closes the Connection
+        /*
         jd_tabacoList.setLocationRelativeTo(null);
+        jd_listCig.pack();
+        jd_listCig.setVisible(true);*/
+        
+        
+        jt_listTabaco.setModel(jt_list.getModel());
+        jd_tabacoList.pack();
+       
+        jd_tabacoList.setLocationRelativeTo(null);
+        jd_tabacoList.setVisible(true);
 
     }//GEN-LAST:event_bt_showListTabacoActionPerformed
 
     private void bt_showListFabricaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_showListFabricaActionPerformed
         // TODO add your handling code here:
+        
+        ResultSet rs;
+        JTable jt_list = null;
+        try {
+            rs = databaseState.executeQuery("select * from Fabricantes");
+            // It creates and displays the table
+            jt_list = new JTable(buildTableModel(rs));
+        } catch (SQLException ex) {
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        jt_listFabrica.setModel(jt_list.getModel());
+        
         jd_fabricaList.pack();
         jd_fabricaList.setVisible(true);
         jd_fabricaList.setLocationRelativeTo(null);
@@ -2443,6 +2479,20 @@ public class GUI extends javax.swing.JFrame {
 
     private void bt_showListExpendioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_showListExpendioActionPerformed
         // TODO add your handling code here:
+        
+        ResultSet rs;
+        JTable jt_list = null;
+        try {
+            rs = databaseState.executeQuery("select * from Estancos");
+            // It creates and displays the table
+            jt_list = new JTable(buildTableModel(rs));
+        } catch (SQLException ex) {
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        jt_listExpendio.setModel(jt_list.getModel());
+        
         jd_expendioList.pack();
         jd_expendioList.setVisible(true);
         jd_expendioList.setLocationRelativeTo(null);
@@ -2450,7 +2500,18 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_showListExpendioActionPerformed
 
     private void bt_showListAlmacenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_showListAlmacenActionPerformed
-        // TODO add your handling code here:
+        ResultSet rs;
+        JTable jt_list = null;
+        try {
+            rs = databaseState.executeQuery("select * from Almacenes");
+            // It creates and displays the table
+            jt_list = new JTable(buildTableModel(rs));
+        } catch (SQLException ex) {
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        jt_listAlmacen.setModel(jt_list.getModel());
+        
         jd_almacenList.pack();
         jd_almacenList.setVisible(true);
         jd_almacenList.setLocationRelativeTo(null);
@@ -2459,6 +2520,18 @@ public class GUI extends javax.swing.JFrame {
 
     private void bt_showListPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_showListPedidoActionPerformed
         // TODO add your handling code here:
+        ResultSet rs;
+        JTable jt_list = null;
+        try {
+            rs = databaseState.executeQuery("select * from Compras");
+            // It creates and displays the table
+            jt_list = new JTable(buildTableModel(rs));
+        } catch (SQLException ex) {
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        jt_listPedido.setModel(jt_list.getModel());
+        
         jd_pedidoList.pack();
         jd_pedidoList.setVisible(true);
         jd_pedidoList.setLocationRelativeTo(null);
@@ -2467,6 +2540,18 @@ public class GUI extends javax.swing.JFrame {
 
     private void bt_showListVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_showListVentaActionPerformed
         // TODO add your handling code here:
+        ResultSet rs;
+        JTable jt_list = null;
+        try {
+            rs = databaseState.executeQuery("select * from Ventas");
+            // It creates and displays the table
+            jt_list = new JTable(buildTableModel(rs));
+        } catch (SQLException ex) {
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        jt_listVenta.setModel(jt_list.getModel());
+        
         jd_ventaList.pack();
         jd_ventaList.setVisible(true);
         jd_ventaList.setLocationRelativeTo(null);
@@ -2795,5 +2880,31 @@ public class GUI extends javax.swing.JFrame {
     Connection databaseCon = null;
     Statement databaseState = null;
     ResultSet databaseRes = null;
+    
+    public static DefaultTableModel buildTableModel(ResultSet rs)
+            throws SQLException {
+
+        ResultSetMetaData metaData = rs.getMetaData();
+
+        // names of columns
+        Vector<String> columnNames = new Vector<String>();
+        int columnCount = metaData.getColumnCount();
+        for (int column = 1; column <= columnCount; column++) {
+            columnNames.add(metaData.getColumnName(column));
+        }
+
+        // data of the table
+        Vector<Vector<Object>> data = new Vector<Vector<Object>>();
+        while (rs.next()) {
+            Vector<Object> vector = new Vector<Object>();
+            for (int columnIndex = 1; columnIndex <= columnCount; columnIndex++) {
+                vector.add(rs.getObject(columnIndex));
+            }
+            data.add(vector);
+        }
+
+        return new DefaultTableModel(data, columnNames);
+
+    }
 
 }

@@ -56,9 +56,9 @@ public class GUI extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jPanel12 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
+        tf_username = new javax.swing.JTextField();
         jPanel13 = new javax.swing.JPanel();
-        jTextField3 = new javax.swing.JTextField();
+        tf_password = new javax.swing.JTextField();
         jd_tabacoList = new javax.swing.JDialog();
         jPanel26 = new javax.swing.JPanel();
         jLabel59 = new javax.swing.JLabel();
@@ -282,15 +282,15 @@ public class GUI extends javax.swing.JFrame {
 
         jPanel12.setBorder(fullBorder);
 
-        jTextField1.setBackground(new java.awt.Color(101, 130, 136));
-        jTextField1.setFont(new java.awt.Font("Gotham Medium", 0, 14)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(101, 130, 136));
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField1.setText("solo denle login");
-        jTextField1.setOpaque(false);
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        tf_username.setBackground(new java.awt.Color(101, 130, 136));
+        tf_username.setFont(new java.awt.Font("Gotham Medium", 0, 14)); // NOI18N
+        tf_username.setForeground(new java.awt.Color(101, 130, 136));
+        tf_username.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf_username.setText("solo denle login");
+        tf_username.setOpaque(false);
+        tf_username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                tf_usernameActionPerformed(evt);
             }
         });
 
@@ -300,26 +300,26 @@ public class GUI extends javax.swing.JFrame {
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE)
+                .addComponent(tf_username, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+            .addComponent(tf_username, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
         );
 
         jPanel13.setBorder(fullBorder);
 
-        jTextField3.setBackground(new java.awt.Color(101, 130, 136));
-        jTextField3.setFont(new java.awt.Font("Gotham Medium", 0, 14)); // NOI18N
-        jTextField3.setForeground(new java.awt.Color(101, 130, 136));
-        jTextField3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField3.setText("solo denle login");
-        jTextField3.setCaretColor(new java.awt.Color(101, 130, 136));
-        jTextField3.setOpaque(false);
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        tf_password.setBackground(new java.awt.Color(101, 130, 136));
+        tf_password.setFont(new java.awt.Font("Gotham Medium", 0, 14)); // NOI18N
+        tf_password.setForeground(new java.awt.Color(101, 130, 136));
+        tf_password.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf_password.setText("solo denle login");
+        tf_password.setCaretColor(new java.awt.Color(101, 130, 136));
+        tf_password.setOpaque(false);
+        tf_password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                tf_passwordActionPerformed(evt);
             }
         });
 
@@ -329,12 +329,12 @@ public class GUI extends javax.swing.JFrame {
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE)
+                .addComponent(tf_password, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+            .addComponent(tf_password, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
@@ -2294,7 +2294,7 @@ public class GUI extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(jLabel5)
                     .addComponent(bt_logout))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                     .addContainerGap(31, Short.MAX_VALUE)
@@ -2408,9 +2408,9 @@ public class GUI extends javax.swing.JFrame {
 
     }//GEN-LAST:event_bt_showAddVentaActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void tf_usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_usernameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_tf_usernameActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -2418,28 +2418,52 @@ public class GUI extends javax.swing.JFrame {
         jd_login.setVisible(false);
         jd_login.dispose();
         try {
-            databaseCon = DriverManager.getConnection("jdbc:oracle:oci8:@localhost:1521:orcl", "user2", "user2");
+            databaseCon = DriverManager.getConnection("jdbc:oracle:oci8:@localhost:1521:orcl", tf_username.getText(), tf_password.getText());
+            
+            //databaseCon = DriverManager.getConnection("avela@//localhost:1521/orcl", tf_username.getText(), tf_password.getText());
         } catch (SQLException ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
         }
         JOptionPane.showMessageDialog(this, "Conectado con éxito");
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void tf_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_passwordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_tf_passwordActionPerformed
 
     private void bt_showListTabacoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_showListTabacoActionPerformed
         // TODO add your handling code here:
         
+//        ResultSet rs;
+//        JTable jt_list = null;
+//        try {
+//            rs = databaseState.executeQuery("select * from Cigarrillos;");
+//            // It creates and displays the table
+//            jt_list = new JTable(buildTableModel(rs));
+//        } catch (SQLException ex) {
+//            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+
         ResultSet rs;
+        Statement st = null;
         JTable jt_list = null;
         try {
-            rs = databaseState.executeQuery("select * from Cigarrillos");
+            st = databaseCon.createStatement();
+            rs = st.executeQuery("select * from Cigarrillos;");
+            //rs = databaseState.executeQuery("select * from Compras;");
             // It creates and displays the table
             jt_list = new JTable(buildTableModel(rs));
         } catch (SQLException ex) {
+            //JDBCTutorialUtilities.printSQLException(ex);
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }finally{
+            if(st!= null){
+                try {
+                    st.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
         }
 
         // Closes the Connection
@@ -2460,15 +2484,38 @@ public class GUI extends javax.swing.JFrame {
     private void bt_showListFabricaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_showListFabricaActionPerformed
         // TODO add your handling code here:
         
+//        ResultSet rs;
+//        JTable jt_list = null;
+//        try {
+//            rs = databaseState.executeQuery("select * from Fabricantes");
+//            // It creates and displays the table
+//            jt_list = new JTable(buildTableModel(rs));
+//        } catch (SQLException ex) {
+//            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+
         ResultSet rs;
+        Statement st = null;
         JTable jt_list = null;
         try {
-            rs = databaseState.executeQuery("select * from Fabricantes");
+            st = databaseCon.createStatement();
+            rs = st.executeQuery("select * from Fabricantes;");
+            //rs = databaseState.executeQuery("select * from Compras;");
             // It creates and displays the table
             jt_list = new JTable(buildTableModel(rs));
         } catch (SQLException ex) {
-            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+            //JDBCTutorialUtilities.printSQLException(ex);
+            //Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }finally{
+            if(st!= null){
+                try {
+                    st.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
         }
+        
         jt_listFabrica.setModel(jt_list.getModel());
         
         jd_fabricaList.pack();
@@ -2480,14 +2527,35 @@ public class GUI extends javax.swing.JFrame {
     private void bt_showListExpendioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_showListExpendioActionPerformed
         // TODO add your handling code here:
         
+//        ResultSet rs;
+//        JTable jt_list = null;
+//        try {
+//            rs = databaseState.executeQuery("select * from Estancos");
+//            // It creates and displays the table
+//            jt_list = new JTable(buildTableModel(rs));
+//        } catch (SQLException ex) {
+//            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+
         ResultSet rs;
+        Statement st = null;
         JTable jt_list = null;
         try {
-            rs = databaseState.executeQuery("select * from Estancos");
+            st = databaseCon.createStatement();
+            rs = st.executeQuery("select * from Estancos;");
+            //rs = databaseState.executeQuery("select * from Compras;");
             // It creates and displays the table
             jt_list = new JTable(buildTableModel(rs));
         } catch (SQLException ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }finally{
+            if(st!= null){
+                try {
+                    st.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
         }
         
         
@@ -2500,14 +2568,35 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_showListExpendioActionPerformed
 
     private void bt_showListAlmacenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_showListAlmacenActionPerformed
+//        ResultSet rs;
+//        JTable jt_list = null;
+//        try {
+//            rs = databaseState.executeQuery("select * from Almacenes");
+//            // It creates and displays the table
+//            jt_list = new JTable(buildTableModel(rs));
+//        } catch (SQLException ex) {
+//            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+
         ResultSet rs;
+        Statement st = null;
         JTable jt_list = null;
         try {
-            rs = databaseState.executeQuery("select * from Almacenes");
+            st = databaseCon.createStatement();
+            rs = st.executeQuery("select * from Almacenes;");
+            //rs = databaseState.executeQuery("select * from Compras;");
             // It creates and displays the table
             jt_list = new JTable(buildTableModel(rs));
         } catch (SQLException ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }finally{
+            if(st!= null){
+                try {
+                    st.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
         }
         
         jt_listAlmacen.setModel(jt_list.getModel());
@@ -2521,13 +2610,24 @@ public class GUI extends javax.swing.JFrame {
     private void bt_showListPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_showListPedidoActionPerformed
         // TODO add your handling code here:
         ResultSet rs;
+        Statement st = null;
         JTable jt_list = null;
         try {
-            rs = databaseState.executeQuery("select * from Compras");
+            st = databaseCon.createStatement();
+            rs = st.executeQuery("select * from Compras;");
+            //rs = databaseState.executeQuery("select * from Compras;");
             // It creates and displays the table
             jt_list = new JTable(buildTableModel(rs));
         } catch (SQLException ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }finally{
+            if(st!= null){
+                try {
+                    st.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
         }
         
         jt_listPedido.setModel(jt_list.getModel());
@@ -2540,17 +2640,37 @@ public class GUI extends javax.swing.JFrame {
 
     private void bt_showListVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_showListVentaActionPerformed
         // TODO add your handling code here:
+//        ResultSet rs;
+//        JTable jt_list = null;
+//        try {
+//            rs = databaseState.executeQuery("select * from Ventas");
+//            // It creates and displays the table
+//            jt_list = new JTable(buildTableModel(rs));
+//        } catch (SQLException ex) {
+//            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        
+//        jt_listVenta.setModel(jt_list.getModel());
         ResultSet rs;
+        Statement st = null;
         JTable jt_list = null;
         try {
-            rs = databaseState.executeQuery("select * from Ventas");
+            st = databaseCon.createStatement();
+            rs = st.executeQuery("select * from Ventas;");
+            //rs = databaseState.executeQuery("select * from Compras;");
             // It creates and displays the table
             jt_list = new JTable(buildTableModel(rs));
         } catch (SQLException ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        }finally{
+            if(st!= null){
+                try {
+                    st.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
         }
-        
-        jt_listVenta.setModel(jt_list.getModel());
         
         jd_ventaList.pack();
         jd_ventaList.setVisible(true);
@@ -2814,8 +2934,6 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JDialog jd_almacenAdd;
     private javax.swing.JDialog jd_almacenList;
     private javax.swing.JDialog jd_expendioAdd;
@@ -2865,12 +2983,14 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JTextField tf_nombreExpendio;
     private javax.swing.JTextField tf_nombreFabrica;
     private javax.swing.JTextField tf_paisFabrica;
+    private javax.swing.JTextField tf_password;
     private javax.swing.JTextField tf_preciocompraPedido;
     private javax.swing.JTextField tf_preciocostoTabaco;
     private javax.swing.JTextField tf_precioventaTabaco;
     private javax.swing.JTextField tf_provinciaExpendio;
     private javax.swing.JTextField tf_totalVenta;
     private javax.swing.JTextField tf_unidadesAlmacen;
+    private javax.swing.JTextField tf_username;
     // End of variables declaration//GEN-END:variables
     DropShadowBorder border = new DropShadowBorder();
     Color c = new Color(0, 0, 0);

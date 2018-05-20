@@ -2420,7 +2420,7 @@ public class GUI extends javax.swing.JFrame {
         try {
             databaseCon = DriverManager.getConnection("jdbc:oracle:oci8:@localhost:1521:orcl", tf_username.getText(), tf_password.getText());
             
-            //databaseCon = DriverManager.getConnection("avela@//localhost:1521/orcl", tf_username.getText(), tf_password.getText());
+
         } catch (SQLException ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -2449,7 +2449,7 @@ public class GUI extends javax.swing.JFrame {
         JTable jt_list = null;
         try {
             st = databaseCon.createStatement();
-            rs = st.executeQuery("select * from Cigarrillos;");
+            rs = st.executeQuery("select * from Cigarrillos");
             //rs = databaseState.executeQuery("select * from Compras;");
             // It creates and displays the table
             jt_list = new JTable(buildTableModel(rs));
@@ -2499,7 +2499,7 @@ public class GUI extends javax.swing.JFrame {
         JTable jt_list = null;
         try {
             st = databaseCon.createStatement();
-            rs = st.executeQuery("select * from Fabricantes;");
+            rs = st.executeQuery("select * from Fabricantes");
             //rs = databaseState.executeQuery("select * from Compras;");
             // It creates and displays the table
             jt_list = new JTable(buildTableModel(rs));
@@ -2542,7 +2542,7 @@ public class GUI extends javax.swing.JFrame {
         JTable jt_list = null;
         try {
             st = databaseCon.createStatement();
-            rs = st.executeQuery("select * from Estancos;");
+            rs = st.executeQuery("select * from Estancos");
             //rs = databaseState.executeQuery("select * from Compras;");
             // It creates and displays the table
             jt_list = new JTable(buildTableModel(rs));
@@ -2583,7 +2583,7 @@ public class GUI extends javax.swing.JFrame {
         JTable jt_list = null;
         try {
             st = databaseCon.createStatement();
-            rs = st.executeQuery("select * from Almacenes;");
+            rs = st.executeQuery("select * from Almacenes");
             //rs = databaseState.executeQuery("select * from Compras;");
             // It creates and displays the table
             jt_list = new JTable(buildTableModel(rs));
@@ -2614,7 +2614,7 @@ public class GUI extends javax.swing.JFrame {
         JTable jt_list = null;
         try {
             st = databaseCon.createStatement();
-            rs = st.executeQuery("select * from Compras;");
+            rs = st.executeQuery("select * from Compras");
             //rs = databaseState.executeQuery("select * from Compras;");
             // It creates and displays the table
             jt_list = new JTable(buildTableModel(rs));
@@ -2656,7 +2656,7 @@ public class GUI extends javax.swing.JFrame {
         JTable jt_list = null;
         try {
             st = databaseCon.createStatement();
-            rs = st.executeQuery("select * from Ventas;");
+            rs = st.executeQuery("select * from Ventas");
             //rs = databaseState.executeQuery("select * from Compras;");
             // It creates and displays the table
             jt_list = new JTable(buildTableModel(rs));

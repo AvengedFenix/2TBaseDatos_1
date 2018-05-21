@@ -2711,7 +2711,8 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_saveTabacoActionPerformed
 
     private void bt_deleteTabacoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_deleteTabacoActionPerformed
-        // TODO add your handling code here:
+        String s = (String)(jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 0));
+        System.out.println(s);
     }//GEN-LAST:event_bt_deleteTabacoActionPerformed
 
     private void bt_saveFabricaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_saveFabricaActionPerformed
@@ -2719,7 +2720,8 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_saveFabricaActionPerformed
 
     private void bt_deleteFabricaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_deleteFabricaActionPerformed
-        // TODO add your handling code here:
+        String s = (String)(jt_listFabrica.getValueAt(jt_listTabaco.getSelectedRow(), 0));
+        System.out.println(s);
     }//GEN-LAST:event_bt_deleteFabricaActionPerformed
 
     private void bt_saveExpendioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_saveExpendioActionPerformed
@@ -2727,7 +2729,8 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_saveExpendioActionPerformed
 
     private void bt_deleteExpendioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_deleteExpendioActionPerformed
-        // TODO add your handling code here:
+        String s = (String)(jt_listExpendio.getValueAt(jt_listTabaco.getSelectedRow(), 0));
+        System.out.println(s);
     }//GEN-LAST:event_bt_deleteExpendioActionPerformed
 
     private void bt_saveAlmacenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_saveAlmacenActionPerformed
@@ -2735,7 +2738,8 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_saveAlmacenActionPerformed
 
     private void bt_deleteAlmacenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_deleteAlmacenActionPerformed
-        // TODO add your handling code here:
+        String s = (String)(jt_listAlmacen.getValueAt(jt_listTabaco.getSelectedRow(), 0));
+        System.out.println(s);
     }//GEN-LAST:event_bt_deleteAlmacenActionPerformed
 
     private void bt_savePedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_savePedidoActionPerformed
@@ -2743,7 +2747,8 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_savePedidoActionPerformed
 
     private void bt_deletePedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_deletePedidoActionPerformed
-        // TODO add your handling code here:
+        String s = (String)(jt_listPedido.getValueAt(jt_listTabaco.getSelectedRow(), 0));
+        System.out.println(s);
     }//GEN-LAST:event_bt_deletePedidoActionPerformed
 
     private void bt_saveVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_saveVentaActionPerformed
@@ -2751,7 +2756,8 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_saveVentaActionPerformed
 
     private void bt_deleteVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_deleteVentaActionPerformed
-        // TODO add your handling code here:
+        String s = (String)(jt_listVenta.getValueAt(jt_listTabaco.getSelectedRow(), 0));
+        System.out.println(s);
     }//GEN-LAST:event_bt_deleteVentaActionPerformed
 
     /**

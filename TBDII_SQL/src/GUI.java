@@ -2392,8 +2392,7 @@ public class GUI extends javax.swing.JFrame {
         jd_login.dispose();
         try {
             databaseCon = DriverManager.getConnection("jdbc:oracle:oci8:@localhost:1521:orcl", tf_username.getText(), tf_password.getText());
-            
-
+            databaseState = databaseCon.createStatement();
         } catch (SQLException ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -2406,7 +2405,7 @@ public class GUI extends javax.swing.JFrame {
 
     private void bt_showListTabacoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_showListTabacoActionPerformed
         // TODO add your handling code here:
-        
+
 //        ResultSet rs;
 //        JTable jt_list = null;
 //        try {
@@ -2416,7 +2415,6 @@ public class GUI extends javax.swing.JFrame {
 //        } catch (SQLException ex) {
 //            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
 //        }
-
         ResultSet rs;
         Statement st = null;
         JTable jt_list = null;
@@ -2429,8 +2427,8 @@ public class GUI extends javax.swing.JFrame {
         } catch (SQLException ex) {
             //JDBCTutorialUtilities.printSQLException(ex);
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-        }finally{
-            if(st!= null){
+        } finally {
+            if (st != null) {
                 try {
                     st.close();
                 } catch (SQLException ex) {
@@ -2444,11 +2442,9 @@ public class GUI extends javax.swing.JFrame {
         jd_tabacoList.setLocationRelativeTo(null);
         jd_listCig.pack();
         jd_listCig.setVisible(true);*/
-        
-        
         jt_listTabaco.setModel(jt_list.getModel());
         jd_tabacoList.pack();
-       
+
         jd_tabacoList.setLocationRelativeTo(null);
         jd_tabacoList.setVisible(true);
 
@@ -2456,7 +2452,7 @@ public class GUI extends javax.swing.JFrame {
 
     private void bt_showListFabricaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_showListFabricaActionPerformed
         // TODO add your handling code here:
-        
+
 //        ResultSet rs;
 //        JTable jt_list = null;
 //        try {
@@ -2466,7 +2462,6 @@ public class GUI extends javax.swing.JFrame {
 //        } catch (SQLException ex) {
 //            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
 //        }
-
         ResultSet rs;
         Statement st = null;
         JTable jt_list = null;
@@ -2479,8 +2474,8 @@ public class GUI extends javax.swing.JFrame {
         } catch (SQLException ex) {
             //JDBCTutorialUtilities.printSQLException(ex);
             //Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-        }finally{
-            if(st!= null){
+        } finally {
+            if (st != null) {
                 try {
                     st.close();
                 } catch (SQLException ex) {
@@ -2488,9 +2483,9 @@ public class GUI extends javax.swing.JFrame {
                 }
             }
         }
-        
+
         jt_listFabrica.setModel(jt_list.getModel());
-        
+
         jd_fabricaList.pack();
         jd_fabricaList.setVisible(true);
         jd_fabricaList.setLocationRelativeTo(null);
@@ -2499,7 +2494,7 @@ public class GUI extends javax.swing.JFrame {
 
     private void bt_showListExpendioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_showListExpendioActionPerformed
         // TODO add your handling code here:
-        
+
 //        ResultSet rs;
 //        JTable jt_list = null;
 //        try {
@@ -2509,7 +2504,6 @@ public class GUI extends javax.swing.JFrame {
 //        } catch (SQLException ex) {
 //            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
 //        }
-
         ResultSet rs;
         Statement st = null;
         JTable jt_list = null;
@@ -2521,8 +2515,8 @@ public class GUI extends javax.swing.JFrame {
             jt_list = new JTable(buildTableModel(rs));
         } catch (SQLException ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-        }finally{
-            if(st!= null){
+        } finally {
+            if (st != null) {
                 try {
                     st.close();
                 } catch (SQLException ex) {
@@ -2530,10 +2524,9 @@ public class GUI extends javax.swing.JFrame {
                 }
             }
         }
-        
-        
+
         jt_listExpendio.setModel(jt_list.getModel());
-        
+
         jd_expendioList.pack();
         jd_expendioList.setVisible(true);
         jd_expendioList.setLocationRelativeTo(null);
@@ -2562,8 +2555,8 @@ public class GUI extends javax.swing.JFrame {
             jt_list = new JTable(buildTableModel(rs));
         } catch (SQLException ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-        }finally{
-            if(st!= null){
+        } finally {
+            if (st != null) {
                 try {
                     st.close();
                 } catch (SQLException ex) {
@@ -2571,9 +2564,9 @@ public class GUI extends javax.swing.JFrame {
                 }
             }
         }
-        
+
         jt_listAlmacen.setModel(jt_list.getModel());
-        
+
         jd_almacenList.pack();
         jd_almacenList.setVisible(true);
         jd_almacenList.setLocationRelativeTo(null);
@@ -2593,8 +2586,8 @@ public class GUI extends javax.swing.JFrame {
             jt_list = new JTable(buildTableModel(rs));
         } catch (SQLException ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-        }finally{
-            if(st!= null){
+        } finally {
+            if (st != null) {
                 try {
                     st.close();
                 } catch (SQLException ex) {
@@ -2602,9 +2595,9 @@ public class GUI extends javax.swing.JFrame {
                 }
             }
         }
-        
+
         jt_listPedido.setModel(jt_list.getModel());
-        
+
         jd_pedidoList.pack();
         jd_pedidoList.setVisible(true);
         jd_pedidoList.setLocationRelativeTo(null);
@@ -2635,8 +2628,8 @@ public class GUI extends javax.swing.JFrame {
             jt_list = new JTable(buildTableModel(rs));
         } catch (SQLException ex) {
             Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
-        }finally{
-            if(st!= null){
+        } finally {
+            if (st != null) {
                 try {
                     st.close();
                 } catch (SQLException ex) {
@@ -2644,7 +2637,7 @@ public class GUI extends javax.swing.JFrame {
                 }
             }
         }
-        
+
         jd_ventaList.pack();
         jd_ventaList.setVisible(true);
         jd_ventaList.setLocationRelativeTo(null);
@@ -2653,6 +2646,32 @@ public class GUI extends javax.swing.JFrame {
 
     private void bt_addTabacoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_addTabacoActionPerformed
         // TODO add your handling code here:
+        String query = "INSERT INTO CIGARRILLOS("
+                + "MARCA,"
+                + "FILTRO,"
+                + "COLOR,"
+                + "CLASE,"
+                + "MENTOL,"
+                + "NICOTINA,"
+                + "ALQUITRAN,"
+                + "PRECIO_COSTO,"
+                + "PRECIO_VENTA)"
+                + "VALUES("
+                + "\'" + tf_marcaTabaco.getText() + "\',"
+                + "\'" + tf_filtroTabaco.getText() + "\',"
+                + "\'" + tf_colorTabaco.getText() + "\',"
+                + "\'" + tf_claseTabaco.getText() + "\',"
+                + "\'" + tf_mentolTabaco.getText() + "\',"
+                + "\'" + tf_nicotinaTabaco.getText() + "\',"
+                + "\'" + tf_alquitranTabaco.getText() + "\',"
+                + "\'" + tf_preciocostoTabaco.getText() + "\',"
+                + tf_precioventaTabaco.getText() + ")";
+
+        try {
+            ResultSet rs = databaseState.executeQuery(query);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_bt_addTabacoActionPerformed
 
     private void bt_addFabricaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_addFabricaActionPerformed
@@ -2669,14 +2688,74 @@ public class GUI extends javax.swing.JFrame {
 
     private void bt_addAlmacenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_addAlmacenActionPerformed
         // TODO add your handling code here:
+        String query = "INSERT INTO ALMACENES("
+                + "NIF_ESTANCO,"
+                + "MARCA,"
+                + "FILTRO,"
+                + "COLOR,"
+                + "CLASE,"
+                + "MENTOL,"
+                + "UNIDADES)"
+                + "VALUES("
+                + "\'" + tf_nifexpendioAlmacen.getText() + "\',"
+                + "\'" + tf_marcaAlmacen.getText() + "\',"
+                + "\'" + tf_filtroAlmacen.getText() + "\',"
+                + "\'" + tf_colorAlmacen.getText() + "\',"
+                + "\'" + tf_claseAlmacen.getText() + "\',"
+                + "\'" + tf_mentolAlmacen.getText() + "\',"
+                + tf_unidadesAlmacen.getText() + ")";
+        try {
+            ResultSet rs = databaseState.executeQuery(query);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_bt_addAlmacenActionPerformed
 
     private void bt_addPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_addPedidoActionPerformed
         // TODO add your handling code here:
+        String query = "INSERT INTO COMPRAS("
+                + "NIF_ESTANCO,"
+                + "MARCA,"
+                + "FILTRO,"
+                + "COLOR,"
+                + "CLASE,"
+                + "MENTOL,"
+                + "FECHA_COMPRA,"
+                + "C_COMPRADA,"
+                + "PRECIO_COMPRA)"
+                + "VALUES("
+                + "\'" + tf_nifexpendioAlmacen.getText() + "\',"
+                + "\'" + tf_marcaAlmacen.getText() + "\',"
+                + "\'" + tf_filtroAlmacen.getText() + "\',"
+                + "\'" + tf_colorAlmacen.getText() + "\',"
+                + "\'" + tf_claseAlmacen.getText() + "\',"
+                + "\'" + tf_mentolAlmacen.getText() + "\',"
+                + "\'" + tf_unidadesAlmacen.getText() + "\'"
+                + "\'" + tf_fechacompraPedido.getText() + "\'"
+                + "\'" + tf_ccompradaPedido.getText() + "\'"
+                + "\'" + tf_preciocompraPedido.getText() + "\')";
+        try {
+            ResultSet rs = databaseState.executeQuery(query);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_bt_addPedidoActionPerformed
 
     private void bt_addVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_addVentaActionPerformed
         // TODO add your handling code here:
+        String query = "INSERT INTO VENTAS("
+                + "IDVENTA,"
+                + "TOTAL,"
+                + "FECHA)"
+                + "VALUES("
+                + "\'" + tf_idVenta.getText() + "\',"
+                + "\'" + tf_totalVenta.getText() + "\',"
+                + "\'" + tf_fechaVenta.getText() + "\')";
+        try {
+            ResultSet rs = databaseState.executeQuery(query);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_bt_addVentaActionPerformed
 
     private void bt_saveTabacoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_saveTabacoActionPerformed
@@ -2684,7 +2763,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_saveTabacoActionPerformed
 
     private void bt_deleteTabacoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_deleteTabacoActionPerformed
-        String s = (String)(jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 0));
+        String s = (String) (jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 0));
         System.out.println(s);
     }//GEN-LAST:event_bt_deleteTabacoActionPerformed
 
@@ -2693,7 +2772,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_saveFabricaActionPerformed
 
     private void bt_deleteFabricaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_deleteFabricaActionPerformed
-        String s = (String)(jt_listFabrica.getValueAt(jt_listTabaco.getSelectedRow(), 0));
+        String s = (String) (jt_listFabrica.getValueAt(jt_listTabaco.getSelectedRow(), 0));
         System.out.println(s);
     }//GEN-LAST:event_bt_deleteFabricaActionPerformed
 
@@ -2702,7 +2781,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_saveExpendioActionPerformed
 
     private void bt_deleteExpendioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_deleteExpendioActionPerformed
-        String s = (String)(jt_listExpendio.getValueAt(jt_listTabaco.getSelectedRow(), 0));
+        String s = (String) (jt_listExpendio.getValueAt(jt_listTabaco.getSelectedRow(), 0));
         System.out.println(s);
     }//GEN-LAST:event_bt_deleteExpendioActionPerformed
 
@@ -2711,7 +2790,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_saveAlmacenActionPerformed
 
     private void bt_deleteAlmacenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_deleteAlmacenActionPerformed
-        String s = (String)(jt_listAlmacen.getValueAt(jt_listTabaco.getSelectedRow(), 0));
+        String s = (String) (jt_listAlmacen.getValueAt(jt_listTabaco.getSelectedRow(), 0));
         System.out.println(s);
     }//GEN-LAST:event_bt_deleteAlmacenActionPerformed
 
@@ -2720,7 +2799,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_savePedidoActionPerformed
 
     private void bt_deletePedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_deletePedidoActionPerformed
-        String s = (String)(jt_listPedido.getValueAt(jt_listTabaco.getSelectedRow(), 0));
+        String s = (String) (jt_listPedido.getValueAt(jt_listTabaco.getSelectedRow(), 0));
         System.out.println(s);
     }//GEN-LAST:event_bt_deletePedidoActionPerformed
 
@@ -2729,7 +2808,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_saveVentaActionPerformed
 
     private void bt_deleteVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_deleteVentaActionPerformed
-        String s = (String)(jt_listVenta.getValueAt(jt_listTabaco.getSelectedRow(), 0));
+        String s = (String) (jt_listVenta.getValueAt(jt_listTabaco.getSelectedRow(), 0));
         System.out.println(s);
     }//GEN-LAST:event_bt_deleteVentaActionPerformed
 
@@ -2987,7 +3066,7 @@ public class GUI extends javax.swing.JFrame {
     Connection databaseCon = null;
     Statement databaseState = null;
     ResultSet databaseRes = null;
-    
+
     public static DefaultTableModel buildTableModel(ResultSet rs)
             throws SQLException {
 

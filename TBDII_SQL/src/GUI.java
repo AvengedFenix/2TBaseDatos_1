@@ -237,11 +237,6 @@ public class GUI extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         bt_showListVenta = new javax.swing.JButton();
         bt_showAddVenta = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
-        bt_logout = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        bt_dashboard = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -1928,7 +1923,7 @@ public class GUI extends javax.swing.JFrame {
         jPanel5.setBorder(fullBorder);
 
         jLabel4.setBackground(new java.awt.Color(255, 153, 6));
-        jLabel4.setFont(new java.awt.Font("Gotham", 1, 24)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Gotham Bold", 0, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(78, 181, 81));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("F A B R I C A");
@@ -1979,13 +1974,13 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bt_showListFabrica, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bt_showAddFabrica, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
 
         jPanel8.setBorder(fullBorder);
 
         jLabel6.setBackground(new java.awt.Color(255, 153, 6));
-        jLabel6.setFont(new java.awt.Font("Gotham", 1, 24)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Gotham Bold", 0, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(26, 186, 209));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("A L M A C E N");
@@ -2032,7 +2027,7 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(60, 60, 60)
                 .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bt_showListAlmacen, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bt_showAddAlmacen, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -2042,7 +2037,7 @@ public class GUI extends javax.swing.JFrame {
         jPanel9.setBorder(fullBorder);
 
         jLabel7.setBackground(new java.awt.Color(255, 153, 6));
-        jLabel7.setFont(new java.awt.Font("Gotham", 1, 24)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Gotham Bold", 0, 24)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(161, 56, 184));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("P E D I D O");
@@ -2093,13 +2088,13 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bt_showListPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bt_showAddPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
 
         jPanel10.setBorder(fullBorder);
 
         jLabel8.setBackground(new java.awt.Color(255, 153, 6));
-        jLabel8.setFont(new java.awt.Font("Gotham", 1, 24)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Gotham Bold", 0, 24)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(226, 67, 51));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("E X P E N D I O");
@@ -2150,13 +2145,13 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bt_showListExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bt_showAddExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(77, Short.MAX_VALUE))
         );
 
         jPanel11.setBorder(fullBorder);
 
         jLabel9.setBackground(new java.awt.Color(255, 153, 6));
-        jLabel9.setFont(new java.awt.Font("Gotham", 1, 24)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Gotham Bold", 0, 24)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 153, 153));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("V E N T A");
@@ -2204,7 +2199,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bt_showListVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bt_showAddVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(71, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -2248,84 +2243,14 @@ public class GUI extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setBorder(fullBorder);
-
-        bt_logout.setBackground(new java.awt.Color(255, 255, 255));
-        bt_logout.setFont(new java.awt.Font("Gotham Medium", 0, 14)); // NOI18N
-        bt_logout.setForeground(new java.awt.Color(0, 0, 0));
-        bt_logout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/round_power_settings_new_black_36dp.png"))); // NOI18N
-        bt_logout.setText("L O G   O U T");
-        bt_logout.setToolTipText("");
-        bt_logout.setBorderPainted(false);
-        bt_logout.setContentAreaFilled(false);
-        bt_logout.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bt_logoutActionPerformed(evt);
-            }
-        });
-
-        jLabel3.setFont(new java.awt.Font("Gotham Black", 0, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 102, 102));
-        jLabel3.setText("T A B A Q U E R A");
-
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/round_smoking_rooms_black_48dp.png"))); // NOI18N
-
-        bt_dashboard.setBackground(new java.awt.Color(255, 255, 255));
-        bt_dashboard.setFont(new java.awt.Font("Gotham Medium", 0, 14)); // NOI18N
-        bt_dashboard.setForeground(new java.awt.Color(0, 0, 0));
-        bt_dashboard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/outline_dashboard_black_36dp.png"))); // NOI18N
-        bt_dashboard.setText("D A S H B O A R D");
-        bt_dashboard.setBorderPainted(false);
-        bt_dashboard.setContentAreaFilled(false);
-        bt_dashboard.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bt_dashboardActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel5)
-                    .addComponent(bt_logout))
-                .addContainerGap(25, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                    .addContainerGap(31, Short.MAX_VALUE)
-                    .addComponent(bt_dashboard)
-                    .addGap(24, 24, 24)))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel5)
-                .addGap(20, 20, 20)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 519, Short.MAX_VALUE)
-                .addComponent(bt_logout, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(19, 19, 19))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(198, 198, 198)
-                    .addComponent(bt_dashboard, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(492, Short.MAX_VALUE)))
-        );
+        jPanel3Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jPanel10, jPanel11, jPanel4, jPanel5, jPanel8, jPanel9});
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(288, 288, 288)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2337,24 +2262,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGap(12, 12, 12)
                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void bt_logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_logoutActionPerformed
-        // TODO add your handling code here:
-        System.exit(0);
-
-    }//GEN-LAST:event_bt_logoutActionPerformed
-
-    private void bt_dashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_dashboardActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bt_dashboardActionPerformed
 
     private void bt_showAddTabacoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_showAddTabacoActionPerformed
         // TODO add your handling code here:
@@ -2808,14 +2719,12 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JButton bt_addPedido;
     private javax.swing.JButton bt_addTabaco;
     private javax.swing.JButton bt_addVenta;
-    private javax.swing.JButton bt_dashboard;
     private javax.swing.JButton bt_deleteAlmacen;
     private javax.swing.JButton bt_deleteExpendio;
     private javax.swing.JButton bt_deleteFabrica;
     private javax.swing.JButton bt_deletePedido;
     private javax.swing.JButton bt_deleteTabaco;
     private javax.swing.JButton bt_deleteVenta;
-    private javax.swing.JButton bt_logout;
     private javax.swing.JButton bt_saveAlmacen;
     private javax.swing.JButton bt_saveExpendio;
     private javax.swing.JButton bt_saveFabrica;
@@ -2854,7 +2763,6 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
@@ -2876,7 +2784,6 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
@@ -2896,7 +2803,6 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;

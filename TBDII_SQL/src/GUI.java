@@ -2832,6 +2832,13 @@ public class GUI extends javax.swing.JFrame {
     private void bt_deleteTabacoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_deleteTabacoActionPerformed
         String s = (String) (jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 0));
         System.out.println(s);
+        String query = "DELETE FROM CIGARRILLO"
+                + "WHERE COLUMN_ID = ";
+        try {
+            ResultSet rs = databaseState.executeQuery(query);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_bt_deleteTabacoActionPerformed
 
     private void bt_saveFabricaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_saveFabricaActionPerformed

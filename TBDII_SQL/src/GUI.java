@@ -128,6 +128,8 @@ public class GUI extends javax.swing.JFrame {
         tf_precioventaTabaco = new javax.swing.JTextField();
         bt_addTabaco = new javax.swing.JButton();
         jPanel17 = new javax.swing.JPanel();
+        jLabel65 = new javax.swing.JLabel();
+        tf_colorTabaco = new javax.swing.JTextField();
         jd_fabricaAdd = new javax.swing.JDialog();
         jPanel18 = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
@@ -155,7 +157,7 @@ public class GUI extends javax.swing.JFrame {
         jLabel35 = new javax.swing.JLabel();
         tf_cpExpendio = new javax.swing.JTextField();
         jLabel36 = new javax.swing.JLabel();
-        tf_expendiduriaExpendio = new javax.swing.JTextField();
+        tf_expendeduriaExpendio = new javax.swing.JTextField();
         jd_almacenAdd = new javax.swing.JDialog();
         jPanel15 = new javax.swing.JPanel();
         jLabel37 = new javax.swing.JLabel();
@@ -1031,6 +1033,12 @@ public class GUI extends javax.swing.JFrame {
             .addGap(0, 15, Short.MAX_VALUE)
         );
 
+        jLabel65.setFont(new java.awt.Font("Gotham Bold", 0, 12)); // NOI18N
+        jLabel65.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel65.setText("C O L O R");
+
+        tf_colorTabaco.setFont(new java.awt.Font("Gotham Medium", 0, 12)); // NOI18N
+
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
         jPanel14Layout.setHorizontalGroup(
@@ -1054,7 +1062,8 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jLabel22)
                             .addComponent(jLabel23)
                             .addComponent(jLabel24)
-                            .addComponent(jLabel25))
+                            .addComponent(jLabel25)
+                            .addComponent(jLabel65))
                         .addGap(31, 31, 31)
                         .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(tf_marcaTabaco)
@@ -1064,7 +1073,8 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(tf_nicotinaTabaco, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(tf_alquitranTabaco, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(tf_preciocostoTabaco)
-                            .addComponent(tf_precioventaTabaco, javax.swing.GroupLayout.Alignment.TRAILING))))
+                            .addComponent(tf_precioventaTabaco, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(tf_colorTabaco))))
                 .addContainerGap(92, Short.MAX_VALUE))
             .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -1074,7 +1084,7 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
                 .addComponent(jLabel17)
-                .addGap(43, 43, 43)
+                .addGap(30, 30, 30)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel18)
                     .addComponent(tf_marcaTabaco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1086,6 +1096,10 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
                     .addComponent(tf_claseTabaco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel65)
+                    .addComponent(tf_colorTabaco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel21)
@@ -1106,7 +1120,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel25)
                     .addComponent(tf_precioventaTabaco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addComponent(bt_addTabaco, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27))
         );
@@ -1292,9 +1306,9 @@ public class GUI extends javax.swing.JFrame {
 
         jLabel36.setFont(new java.awt.Font("Gotham Bold", 0, 12)); // NOI18N
         jLabel36.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel36.setText("E X P E N D I D U R I A");
+        jLabel36.setText("E X P E N D E D U R I A");
 
-        tf_expendiduriaExpendio.setFont(new java.awt.Font("Gotham Medium", 0, 12)); // NOI18N
+        tf_expendeduriaExpendio.setFont(new java.awt.Font("Gotham Medium", 0, 12)); // NOI18N
 
         javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
         jPanel20.setLayout(jPanel20Layout);
@@ -1308,50 +1322,62 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(jPanel20Layout.createSequentialGroup()
                 .addGap(73, 73, 73)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel20Layout.createSequentialGroup()
-                            .addComponent(jLabel32)
-                            .addGap(27, 27, 27)
-                            .addComponent(tf_localidadExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel20Layout.createSequentialGroup()
-                            .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel31, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel30, javax.swing.GroupLayout.Alignment.TRAILING))
-                            .addGap(27, 27, 27)
-                            .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(tf_nombreExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(tf_direccionExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel20Layout.createSequentialGroup()
+                        .addComponent(jLabel31)
+                        .addGap(27, 27, 27)
+                        .addComponent(tf_direccionExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel20Layout.createSequentialGroup()
+                        .addComponent(jLabel30)
+                        .addGap(27, 27, 27)
+                        .addComponent(tf_nombreExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel20Layout.createSequentialGroup()
                         .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel33)
                             .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel35)
-                                .addComponent(jLabel34)))
+                            .addComponent(jLabel34))
                         .addGap(27, 27, 27)
                         .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(tf_provinciaExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(tf_nifExpendio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(tf_cpExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tf_expendiduriaExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(55, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel29)
-                .addGap(182, 182, 182))
+                            .addComponent(tf_expendeduriaExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tf_nifExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel20Layout.createSequentialGroup()
+                        .addComponent(jLabel35)
+                        .addGap(35, 35, 35)
+                        .addComponent(tf_cpExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel20Layout.createSequentialGroup()
+                        .addGap(119, 119, 119)
+                        .addComponent(jLabel29))
+                    .addGroup(jPanel20Layout.createSequentialGroup()
+                        .addComponent(jLabel33)
+                        .addGap(27, 27, 27)
+                        .addComponent(tf_provinciaExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel20Layout.createSequentialGroup()
+                        .addComponent(jLabel32)
+                        .addGap(27, 27, 27)
+                        .addComponent(tf_localidadExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
         jPanel20Layout.setVerticalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel20Layout.createSequentialGroup()
                 .addComponent(jPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
+                .addGap(42, 42, 42)
                 .addComponent(jLabel29)
-                .addGap(65, 65, 65)
+                .addGap(59, 59, 59)
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel34)
+                    .addComponent(tf_nifExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel36)
+                    .addComponent(tf_expendeduriaExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel35)
+                    .addComponent(tf_cpExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel30)
                     .addComponent(tf_nombreExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(12, 12, 12)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel31)
                     .addComponent(tf_direccionExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1363,18 +1389,6 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel33)
                     .addComponent(tf_provinciaExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel34)
-                    .addComponent(tf_nifExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel35)
-                    .addComponent(tf_cpExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel36)
-                    .addComponent(tf_expendiduriaExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
                 .addComponent(bt_addExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28))
@@ -1384,11 +1398,13 @@ public class GUI extends javax.swing.JFrame {
         jd_expendioAdd.getContentPane().setLayout(jd_expendioAddLayout);
         jd_expendioAddLayout.setHorizontalGroup(
             jd_expendioAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(jd_expendioAddLayout.createSequentialGroup()
+                .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jd_expendioAddLayout.setVerticalGroup(
             jd_expendioAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_expendioAddLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_expendioAddLayout.createSequentialGroup()
                 .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -2641,6 +2657,11 @@ public class GUI extends javax.swing.JFrame {
 
     private void bt_addTabacoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_addTabacoActionPerformed
         // TODO add your handling code here:
+
+        int alquitran = Integer.parseInt(tf_alquitranTabaco.getText());
+        int precio_costo = Integer.parseInt(tf_preciocostoTabaco.getText());
+        int precio_venta = Integer.parseInt(tf_precioventaTabaco.getText());
+
         String query = "INSERT INTO CIGARRILLOS("
                 + "MARCA,"
                 + "FILTRO,"
@@ -2658,9 +2679,9 @@ public class GUI extends javax.swing.JFrame {
                 + "\'" + tf_claseTabaco.getText() + "\',"
                 + "\'" + tf_mentolTabaco.getText() + "\',"
                 + "\'" + tf_nicotinaTabaco.getText() + "\',"
-                + "\'" + tf_alquitranTabaco.getText() + "\',"
-                + "\'" + tf_preciocostoTabaco.getText() + "\',"
-                + tf_precioventaTabaco.getText() + ")";
+                + "\'" + alquitran + "\',"
+                + "\'" + precio_costo + "\',"
+                + precio_venta + ")";
 
         try {
             ResultSet rs = databaseState.executeQuery(query);
@@ -2687,6 +2708,9 @@ public class GUI extends javax.swing.JFrame {
 
     private void bt_addExpendioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_addExpendioActionPerformed
         // TODO add your handling code here:
+        int expendeduria = Integer.parseInt(tf_expendeduriaExpendio.getText());
+        int cp = Integer.parseInt(tf_cpExpendio.getText());
+        
         String query = "INSERT INTO ESTANCOS("
                 + "NIF_ESTANCO,"
                 + "EXPENDEDURIA,"
@@ -2696,9 +2720,9 @@ public class GUI extends javax.swing.JFrame {
                 + "LOCALIDAD_ESTANCO,"
                 + "PROVINCIA_ESTANCO)"
                 + "VALUES("
-                + "\'" + tf_nifexpendioExpendio.getText() + "\',"
-                + "\'" + tf_expendeduriaExpendio.getText() + "\',"
-                + "\'" + tf_cpExpendio.getText() + "\',"
+                + "\'" + tf_nifExpendio.getText() + "\',"
+                + "\'" + expendeduria + "\',"
+                + "\'" + cp + "\',"
                 + "\'" + tf_nombreExpendio.getText() + "\',"
                 + "\'" + tf_direccionExpendio.getText() + "\',"
                 + "\'" + tf_localidadExpendio.getText() + "\',"
@@ -2713,6 +2737,7 @@ public class GUI extends javax.swing.JFrame {
 
     private void bt_addAlmacenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_addAlmacenActionPerformed
         // TODO add your handling code here:
+        int almacen = Integer.parseInt(tf_unidadesAlmacen.getText());
         String query = "INSERT INTO ALMACENES("
                 + "NIF_ESTANCO,"
                 + "MARCA,"
@@ -2728,7 +2753,7 @@ public class GUI extends javax.swing.JFrame {
                 + "\'" + tf_colorAlmacen.getText() + "\',"
                 + "\'" + tf_claseAlmacen.getText() + "\',"
                 + "\'" + tf_mentolAlmacen.getText() + "\',"
-                + tf_unidadesAlmacen.getText() + ")";
+                + almacen + ")";
         try {
             ResultSet rs = databaseState.executeQuery(query);
         } catch (Exception e) {
@@ -2738,6 +2763,9 @@ public class GUI extends javax.swing.JFrame {
 
     private void bt_addPedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_addPedidoActionPerformed
         // TODO add your handling code here:
+        int ccomprada = Integer.parseInt(tf_ccompradaPedido.getText());
+        int preciocompra = Integer.parseInt(tf_preciocompraPedido.getText());
+        
         String query = "INSERT INTO COMPRAS("
                 + "NIF_ESTANCO,"
                 + "MARCA,"
@@ -2757,8 +2785,8 @@ public class GUI extends javax.swing.JFrame {
                 + "\'" + tf_mentolAlmacen.getText() + "\',"
                 + "\'" + tf_unidadesAlmacen.getText() + "\'"
                 + "\'" + tf_fechacompraPedido.getText() + "\'"
-                + "\'" + tf_ccompradaPedido.getText() + "\'"
-                + "\'" + tf_preciocompraPedido.getText() + "\')";
+                + "\'" + ccomprada + "\'"
+                + "\'" + preciocompra + "\')";
         try {
             ResultSet rs = databaseState.executeQuery(query);
         } catch (Exception e) {
@@ -2768,13 +2796,16 @@ public class GUI extends javax.swing.JFrame {
 
     private void bt_addVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_addVentaActionPerformed
         // TODO add your handling code here:
+        int id = Integer.parseInt(tf_idVenta.getText());
+        int total = Integer.parseInt(tf_totalVenta.getText());
+        
         String query = "INSERT INTO VENTAS("
                 + "IDVENTA,"
                 + "TOTAL,"
                 + "FECHA)"
                 + "VALUES("
-                + "\'" + tf_idVenta.getText() + "\',"
-                + "\'" + tf_totalVenta.getText() + "\',"
+                + "\'" + id + "\',"
+                + "\'" + total + "\',"
                 + "\'" + tf_fechaVenta.getText() + "\')";
         try {
             ResultSet rs = databaseState.executeQuery(query);
@@ -2979,6 +3010,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -3051,9 +3083,10 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JTextField tf_claseTabaco;
     private javax.swing.JTextField tf_colorAlmacen;
     private javax.swing.JTextField tf_colorPedido;
+    private javax.swing.JTextField tf_colorTabaco;
     private javax.swing.JTextField tf_cpExpendio;
     private javax.swing.JTextField tf_direccionExpendio;
-    private javax.swing.JTextField tf_expendiduriaExpendio;
+    private javax.swing.JTextField tf_expendeduriaExpendio;
     private javax.swing.JTextField tf_fechaVenta;
     private javax.swing.JTextField tf_fechacompraPedido;
     private javax.swing.JTextField tf_filtroAlmacen;

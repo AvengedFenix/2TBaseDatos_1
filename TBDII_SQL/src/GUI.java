@@ -1283,11 +1283,6 @@ public class GUI extends javax.swing.JFrame {
         jLabel34.setText("N I F");
 
         tf_nifExpendio.setFont(new java.awt.Font("Gotham Medium", 0, 12)); // NOI18N
-        tf_nifExpendio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tf_nifExpendioActionPerformed(evt);
-            }
-        });
 
         jLabel35.setFont(new java.awt.Font("Gotham Bold", 0, 12)); // NOI18N
         jLabel35.setForeground(new java.awt.Color(51, 51, 51));
@@ -2676,15 +2671,45 @@ public class GUI extends javax.swing.JFrame {
 
     private void bt_addFabricaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_addFabricaActionPerformed
         // TODO add your handling code here:
+        String query = "INSERT INTO FABRICANTES("
+                + "NOMBRE_FABRICANTE,"
+                + "PAIS)"
+                + "VALUES("
+                + "\'" + tf_nombreFabrica.getText() + "\',"
+                + tf_paisFabrica.getText() + ")";
+
+        try {
+            ResultSet rs = databaseState.executeQuery(query);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_bt_addFabricaActionPerformed
 
     private void bt_addExpendioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_addExpendioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bt_addExpendioActionPerformed
+        String query = "INSERT INTO ESTANCOS("
+                + "NIF_ESTANCO,"
+                + "EXPENDEDURIA,"
+                + "CP_ESTANCO,"
+                + "NOMBRE_ESTANCO,"
+                + "DIRECCION_ESTANCO,"
+                + "LOCALIDAD_ESTANCO,"
+                + "PROVINCIA_ESTANCO)"
+                + "VALUES("
+                + "\'" + tf_nifexpendioExpendio.getText() + "\',"
+                + "\'" + tf_expendeduriaExpendio.getText() + "\',"
+                + "\'" + tf_cpExpendio.getText() + "\',"
+                + "\'" + tf_nombreExpendio.getText() + "\',"
+                + "\'" + tf_direccionExpendio.getText() + "\',"
+                + "\'" + tf_localidadExpendio.getText() + "\',"
+                + tf_provinciaExpendio.getText() + ")";
 
-    private void tf_nifExpendioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_nifExpendioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tf_nifExpendioActionPerformed
+        try {
+            ResultSet rs = databaseState.executeQuery(query);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_bt_addExpendioActionPerformed
 
     private void bt_addAlmacenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_addAlmacenActionPerformed
         // TODO add your handling code here:

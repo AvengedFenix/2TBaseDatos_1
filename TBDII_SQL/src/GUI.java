@@ -1,4 +1,5 @@
 
+
 import java.awt.Color;
 import static java.awt.Color.black;
 import java.sql.Connection;
@@ -3001,7 +3002,7 @@ public class GUI extends javax.swing.JFrame {
                 + "\'" + date + "\')";
         try {
             ResultSet rs = databaseState.executeQuery(query);
-        } catch (Exception e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }//GEN-LAST:event_bt_addVentaActionPerformed
@@ -3011,8 +3012,87 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_saveTabacoActionPerformed
 
     private void bt_deleteTabacoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_deleteTabacoActionPerformed
-        String s = (String) (jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 0));
-        System.out.println(s);
+        /*String s = (String) (jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 0));
+        System.out.println(s);*/
+        
+        
+        String [] columnas = new String[jt_listTabaco.getColumnCount()];
+        
+        for (int i = 0; i < jt_listTabaco.getColumnCount(); i++) {
+            columnas[i] = jt_listTabaco.getColumnName(i);
+            System.out.println("name: " + columnas[i]);
+        }
+        
+        String query = "DELETE FROM CIGARRILLOS "
+                + "WHERE ";
+        
+        query   += "MARCA = '" + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 0)
+                + "'" + " AND " + 
+                "FILTRO = '" + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 1)
+                + "'" + " AND "  +
+                "COLOR = '" + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 2)
+                + "'" + " AND " + 
+                "CLASE = '" + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 3)
+                + "'" + " AND " +
+                "MENTOL = '" + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 4)
+                + "'" + " AND " +
+                "NICOTINA = " + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 5)
+                + " AND " +
+                "ALQUITRAN = " + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 6)
+                + " AND " +
+                "PRECIO_COSTO = " + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 7)
+                + " AND " +
+                "PRECIO_VENTA = " + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 8);
+        /*for (int i = 0; i < columnas.length; i++) {
+           
+            boolean isInt = false;
+            try {
+            System.out.println(Double.parseDouble((String)jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), i)));
+            } catch (NumberFormatException e) {
+                isInt = true;
+            //query += "'";
+            }
+            System.out.println("isInt ? " + isInt);
+            if(!isInt){
+                query += i < columnas.length - 1 ? columnas[i] + " = "  + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), i) +  " AND "
+                    : columnas[i] + " = " + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), i);
+            }else{
+                query += i < columnas.length - 1 ? columnas[i] + " = "  + "'" + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), i) + "'" + " AND "
+                    : columnas[i] + " = " + "'" + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), i) + "'";
+            }
+            
+        }*/
+        
+        System.out.println("query: " + query);
+        /*
+        try {
+            ResultSet rs = databaseState.executeQuery(query);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }*/
+        /*
+        ResultSet rs;
+        Statement st = null;
+        try {
+            st = databaseCon.createStatement();
+            rs = st.executeQuery(query);
+        } catch (SQLException ex) {
+            //JDBCTutorialUtilities.printSQLException(ex);
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            if (st != null) {
+                try {
+                    st.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }*/
+        
+        DefaultTableModel model = (DefaultTableModel) jt_listTabaco.getModel();
+        model.removeRow(jt_listTabaco.getSelectedRow());
+        model.fireTableDataChanged();
+        
     }//GEN-LAST:event_bt_deleteTabacoActionPerformed
 
     private void bt_saveFabricaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_saveFabricaActionPerformed
@@ -3020,8 +3100,57 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_saveFabricaActionPerformed
 
     private void bt_deleteFabricaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_deleteFabricaActionPerformed
-        String s = (String) (jt_listFabrica.getValueAt(jt_listTabaco.getSelectedRow(), 0));
-        System.out.println(s);
+        
+        String [] columnas = new String[jt_listFabrica.getColumnCount()];
+        
+        for (int i = 0; i < jt_listFabrica.getColumnCount(); i++) {
+            columnas[i] = jt_listFabrica.getColumnName(i);
+            System.out.println("name: " + columnas[i]);
+        }
+        
+        String query = "DELETE FROM FABRICANTES "
+                + "WHERE ";
+        
+        
+        /*if(query.StringUtils.isNumericSpace()){
+            
+        }*/
+        
+        for (int i = 0; i < columnas.length; i++) {
+            query += i < columnas.length - 1 ? columnas[i] + " = '" + jt_listFabrica.getValueAt(jt_listFabrica.getSelectedRow(), i) + "' AND "
+                    : columnas[i] + " = '" + jt_listFabrica.getValueAt(jt_listFabrica.getSelectedRow(), i) + "'";
+        }
+
+        System.out.println("query: " + query);
+        
+//        try {
+//            ResultSet rs = databaseState.executeQuery(query);
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+
+        ResultSet rs;
+        Statement st = null;
+        try {
+            st = databaseCon.createStatement();
+            rs = st.executeQuery(query);
+        } catch (SQLException ex) {
+            //JDBCTutorialUtilities.printSQLException(ex);
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            if (st != null) {
+                try {
+                    st.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+        
+        DefaultTableModel model = (DefaultTableModel) jt_listFabrica.getModel();
+        model.removeRow(jt_listFabrica.getSelectedRow());
+        model.fireTableDataChanged();
+        
     }//GEN-LAST:event_bt_deleteFabricaActionPerformed
 
     private void bt_saveExpendioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_saveExpendioActionPerformed
@@ -3029,17 +3158,114 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_saveExpendioActionPerformed
 
     private void bt_deleteExpendioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_deleteExpendioActionPerformed
-        String s = (String) (jt_listExpendio.getValueAt(jt_listTabaco.getSelectedRow(), 0));
-        System.out.println(s);
+        
+        String [] columnas = new String[jt_listExpendio.getColumnCount()];
+        
+        for (int i = 0; i < jt_listExpendio.getColumnCount(); i++) {
+            columnas[i] = jt_listExpendio.getColumnName(i);
+            System.out.println("name: " + columnas[i]);
+        }
+        
+        String query = "DELETE FROM ESTANCOS "
+                + "WHERE "
+                
+                + "NIF_ESTANCO = '" + jt_listExpendio.getValueAt(jt_listExpendio.getSelectedRow(), 0) 
+                + "' AND " 
+                + "EXPENDEDURIA = " + jt_listExpendio.getValueAt(jt_listExpendio.getSelectedRow(), 1)
+                + " AND "
+                + "CP_ESTANCO = " + jt_listExpendio.getValueAt(jt_listExpendio.getSelectedRow(), 2)
+                + " AND ";
+        
+        
+        
+        for (int i = 3; i < columnas.length; i++) {
+            query += i < columnas.length - 1 ? columnas[i] + " = '" + jt_listExpendio.getValueAt(jt_listExpendio.getSelectedRow(), i) + "' AND "
+                    : columnas[i] + " = '" + jt_listExpendio.getValueAt(jt_listExpendio.getSelectedRow(), i) + "'";
+            
+        }
+        
+        System.out.println("query: " + query);
+        
+//        try {
+//            ResultSet rs = databaseState.executeQuery(query);
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+
+        ResultSet rs;
+        Statement st = null;
+        try {
+            st = databaseCon.createStatement();
+            rs = st.executeQuery(query);
+        } catch (SQLException ex) {
+            //JDBCTutorialUtilities.printSQLException(ex);
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            if (st != null) {
+                try {
+                    st.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+        
+        DefaultTableModel model = (DefaultTableModel) jt_listExpendio.getModel();
+        model.removeRow(jt_listExpendio.getSelectedRow());
+        model.fireTableDataChanged();
     }//GEN-LAST:event_bt_deleteExpendioActionPerformed
 
     private void bt_saveAlmacenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_saveAlmacenActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_bt_saveAlmacenActionPerformed
 
     private void bt_deleteAlmacenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_deleteAlmacenActionPerformed
-        String s = (String) (jt_listAlmacen.getValueAt(jt_listTabaco.getSelectedRow(), 0));
-        System.out.println(s);
+        String [] columnas = new String[jt_listAlmacen.getColumnCount()];
+        
+        for (int i = 0; i < jt_listAlmacen.getColumnCount(); i++) {
+            columnas[i] = jt_listAlmacen.getColumnName(i);
+            System.out.println("name: " + columnas[i]);
+        }
+        
+        String query = "DELETE FROM ALMACENES "
+                + "WHERE ";
+        
+        for (int i = 0; i < columnas.length; i++) {
+            query += i < columnas.length - 1 ? columnas[i] + " = '" + jt_listAlmacen.getValueAt(jt_listAlmacen.getSelectedRow(), i) + "' AND "
+                    : columnas[i] + " = " + jt_listAlmacen.getValueAt(jt_listAlmacen.getSelectedRow(), i);
+            
+        }
+        
+        System.out.println("query: " + query);
+        
+//        try {
+//            ResultSet rs = databaseState.executeQuery(query);
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+
+        ResultSet rs;
+        Statement st = null;
+        try {
+            st = databaseCon.createStatement();
+            rs = st.executeQuery(query);
+        } catch (SQLException ex) {
+            //JDBCTutorialUtilities.printSQLException(ex);
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            if (st != null) {
+                try {
+                    st.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+        
+        DefaultTableModel model = (DefaultTableModel) jt_listAlmacen.getModel();
+        model.removeRow(jt_listAlmacen.getSelectedRow());
+        model.fireTableDataChanged();
+        
     }//GEN-LAST:event_bt_deleteAlmacenActionPerformed
 
     private void bt_savePedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_savePedidoActionPerformed
@@ -3047,8 +3273,58 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_savePedidoActionPerformed
 
     private void bt_deletePedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_deletePedidoActionPerformed
-        String s = (String) (jt_listPedido.getValueAt(jt_listTabaco.getSelectedRow(), 0));
-        System.out.println(s);
+        
+        String [] columnas = new String[jt_listPedido.getColumnCount()];
+        
+        for (int i = 0; i < jt_listPedido.getColumnCount(); i++) {
+            columnas[i] = jt_listPedido.getColumnName(i);
+            System.out.println("name: " + columnas[i]);
+        }
+        
+        String query = "DELETE FROM COMPRAS "
+                + "WHERE ";
+        
+        for (int i = 0; i < 6; i++) {
+                
+           query +=  columnas[i] + " = '"  + jt_listPedido.getValueAt(jt_listPedido.getSelectedRow(), i) +  "' AND ";
+            
+        }
+        query += "FECHA_COMPRA = TO_DATE('" + (jt_listPedido.getValueAt(jt_listPedido.getSelectedRow(), 6)).toString().substring(0,10) + "', 'YYYY/MM/DD')"
+                + " AND " + 
+                "C_COMPRADA = " + jt_listPedido.getValueAt(jt_listPedido.getSelectedRow(), 7)
+                + " AND " +
+                "PRECIO_COMPRA = " + jt_listPedido.getValueAt(jt_listPedido.getSelectedRow(), 8);
+        
+        System.out.println("query: " + query);
+        
+//        try {
+//            ResultSet rs = databaseState.executeQuery(query);
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+
+        ResultSet rs;
+        Statement st = null;
+        try {
+            st = databaseCon.createStatement();
+            rs = st.executeQuery(query);
+        } catch (SQLException ex) {
+            //JDBCTutorialUtilities.printSQLException(ex);
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            if (st != null) {
+                try {
+                    st.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+        
+        DefaultTableModel model = (DefaultTableModel) jt_listPedido.getModel();
+        model.removeRow(jt_listPedido.getSelectedRow());
+        model.fireTableDataChanged();
+      
     }//GEN-LAST:event_bt_deletePedidoActionPerformed
 
     private void bt_saveVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_saveVentaActionPerformed
@@ -3056,8 +3332,53 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_saveVentaActionPerformed
 
     private void bt_deleteVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_deleteVentaActionPerformed
-        String s = (String) (jt_listVenta.getValueAt(jt_listTabaco.getSelectedRow(), 0));
-        System.out.println(s);
+        
+        String [] columnas = new String[jt_listVenta.getColumnCount()];
+        
+        for (int i = 0; i < jt_listVenta.getColumnCount(); i++) {
+            columnas[i] = jt_listVenta.getColumnName(i);
+            System.out.println("name: " + columnas[i]);
+        }
+        
+        String query = "DELETE FROM ESTANCOS "
+                + "WHERE ";
+        
+        for (int i = 0; i < columnas.length; i++) {
+            query += i < columnas.length - 1 ? columnas[i] + " = " + jt_listVenta.getValueAt(jt_listVenta.getSelectedRow(), i) + " AND "
+                    : columnas[i] + " = " + jt_listVenta.getValueAt(jt_listVenta.getSelectedRow(), i);
+            
+        }
+        
+        System.out.println("query: " + query);
+        
+//        try {
+//            ResultSet rs = databaseState.executeQuery(query);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+
+        ResultSet rs;
+        Statement st = null;
+        try {
+            st = databaseCon.createStatement();
+            rs = st.executeQuery(query);
+        } catch (SQLException ex) {
+            //JDBCTutorialUtilities.printSQLException(ex);
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            if (st != null) {
+                try {
+                    st.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+        
+        DefaultTableModel model = (DefaultTableModel) jt_listVenta.getModel();
+        model.removeRow(jt_listVenta.getSelectedRow());
+        model.fireTableDataChanged();
+        
     }//GEN-LAST:event_bt_deleteVentaActionPerformed
 
     private void bt_dashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_dashboardActionPerformed

@@ -2842,14 +2842,28 @@ public class GUI extends javax.swing.JFrame {
             System.out.println("name: " + columnas[i]);
         }
         
-        String query = "DELETE FROM CIGARRILLOS"
+        String query = "DELETE FROM CIGARRILLOS "
                 + "WHERE ";
         
-        for (int i = 0; i < columnas.length; i++) {
-            /*
-            System.out.println(Integer.parseInt((String)jt_listPedido.getValueAt(jt_listPedido.getSelectedRow(), i)));
-            query += i < columnas.length - 1 ? columnas[i] + " = " + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), i) + " AND "
-                    : columnas[i] + " = " + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), i);*/
+        query   += "MARCA = '" + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 0)
+                + "'" + " AND " + 
+                "FILTRO = '" + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 1)
+                + "'" + " AND "  +
+                "COLOR = '" + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 2)
+                + "'" + " AND " + 
+                "CLASE = '" + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 3)
+                + "'" + " AND " +
+                "MENTOL = '" + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 4)
+                + "'" + " AND " +
+                "NICOTINA = " + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 5)
+                + " AND " +
+                "ALQUITRAN = " + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 6)
+                + " AND " +
+                "PRECIO_COSTO = " + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 7)
+                + " AND " +
+                "PRECIO_VENTA = " + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 8);
+        /*for (int i = 0; i < columnas.length; i++) {
+           
             boolean isInt = false;
             try {
             System.out.println(Double.parseDouble((String)jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), i)));
@@ -2866,7 +2880,7 @@ public class GUI extends javax.swing.JFrame {
                     : columnas[i] + " = " + "'" + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), i) + "'";
             }
             
-        }
+        }*/
         
         System.out.println("query: " + query);
         /*
@@ -2875,7 +2889,7 @@ public class GUI extends javax.swing.JFrame {
         } catch (SQLException e) {
             e.printStackTrace();
         }*/
-        
+        /*
         ResultSet rs;
         Statement st = null;
         try {
@@ -2892,7 +2906,7 @@ public class GUI extends javax.swing.JFrame {
                     Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
-        }
+        }*/
         
         DefaultTableModel model = (DefaultTableModel) jt_listTabaco.getModel();
         model.removeRow(jt_listTabaco.getSelectedRow());
@@ -2916,27 +2930,16 @@ public class GUI extends javax.swing.JFrame {
         String query = "DELETE FROM FABRICANTES "
                 + "WHERE ";
         
-        System.out.println("INT:");
-        
         
         /*if(query.StringUtils.isNumericSpace()){
             
         }*/
         
         for (int i = 0; i < columnas.length; i++) {
-            boolean isInt = false;
-            try {
-            System.out.println(Integer.parseInt(query));
-            } catch (NumberFormatException e) {
-            query += "'";
-            }
-            
-            query += !isInt ? "'" : "";
-            query += i < columnas.length - 1 ? columnas[i] + " = " + jt_listFabrica.getValueAt(jt_listFabrica.getSelectedRow(), i) + " AND "
-                    : columnas[i] + " = " + jt_listFabrica.getValueAt(jt_listFabrica.getSelectedRow(), i);
-            query += !isInt ? "'" : "";
+            query += i < columnas.length - 1 ? columnas[i] + " = '" + jt_listFabrica.getValueAt(jt_listFabrica.getSelectedRow(), i) + "' AND "
+                    : columnas[i] + " = '" + jt_listFabrica.getValueAt(jt_listFabrica.getSelectedRow(), i) + "'";
         }
-        query += ";";
+
         System.out.println("query: " + query);
         
 //        try {
@@ -2983,11 +2986,20 @@ public class GUI extends javax.swing.JFrame {
         }
         
         String query = "DELETE FROM ESTANCOS "
-                + "WHERE ";
+                + "WHERE "
+                
+                + "NIF_ESTANCO = '" + jt_listExpendio.getValueAt(jt_listExpendio.getSelectedRow(), 0) 
+                + "' AND " 
+                + "EXPENDEDURIA = " + jt_listExpendio.getValueAt(jt_listExpendio.getSelectedRow(), 1)
+                + " AND "
+                + "CP_ESTANCO = " + jt_listExpendio.getValueAt(jt_listExpendio.getSelectedRow(), 2)
+                + " AND ";
         
-        for (int i = 0; i < columnas.length; i++) {
-            query += i < columnas.length - 1 ? columnas[i] + " = " + jt_listExpendio.getValueAt(jt_listExpendio.getSelectedRow(), i) + " AND "
-                    : columnas[i] + " = " + jt_listExpendio.getValueAt(jt_listExpendio.getSelectedRow(), i);
+        
+        
+        for (int i = 3; i < columnas.length; i++) {
+            query += i < columnas.length - 1 ? columnas[i] + " = '" + jt_listExpendio.getValueAt(jt_listExpendio.getSelectedRow(), i) + "' AND "
+                    : columnas[i] + " = '" + jt_listExpendio.getValueAt(jt_listExpendio.getSelectedRow(), i) + "'";
             
         }
         
@@ -3034,11 +3046,11 @@ public class GUI extends javax.swing.JFrame {
             System.out.println("name: " + columnas[i]);
         }
         
-        String query = "DELETE FROM ESTANCOS "
+        String query = "DELETE FROM ALMACENES "
                 + "WHERE ";
         
         for (int i = 0; i < columnas.length; i++) {
-            query += i < columnas.length - 1 ? columnas[i] + " = " + jt_listAlmacen.getValueAt(jt_listAlmacen.getSelectedRow(), i) + " AND "
+            query += i < columnas.length - 1 ? columnas[i] + " = '" + jt_listAlmacen.getValueAt(jt_listAlmacen.getSelectedRow(), i) + "' AND "
                     : columnas[i] + " = " + jt_listAlmacen.getValueAt(jt_listAlmacen.getSelectedRow(), i);
             
         }
@@ -3088,28 +3100,19 @@ public class GUI extends javax.swing.JFrame {
             System.out.println("name: " + columnas[i]);
         }
         
-        String query = "DELETE FROM Compras "
+        String query = "DELETE FROM COMPRAS "
                 + "WHERE ";
         
-        for (int i = 0; i < columnas.length; i++) {
-            boolean isInt = false;
-            try {
-            System.out.println(Integer.parseInt((String)jt_listPedido.getValueAt(jt_listPedido.getSelectedRow(), i)));
-            } catch (Exception e) {
-                isInt = true;
-            //query += "'";
-            }
-            System.out.println("isInt ? " + isInt);
-            if(!isInt){
-                query += i < columnas.length - 1 ? columnas[i] + " = "  + jt_listPedido.getValueAt(jt_listPedido.getSelectedRow(), i) +  " AND "
-                    : columnas[i] + " = " + jt_listPedido.getValueAt(jt_listPedido.getSelectedRow(), i);
-            }else{
-                query += i < columnas.length - 1 ? columnas[i] + " = "  + "'" + jt_listPedido.getValueAt(jt_listPedido.getSelectedRow(), i) + "'" + " AND "
-                    : columnas[i] + " = " + "'" + jt_listPedido.getValueAt(jt_listPedido.getSelectedRow(), i) + "'";
-            }
+        for (int i = 0; i < 6; i++) {
+                
+           query +=  columnas[i] + " = '"  + jt_listPedido.getValueAt(jt_listPedido.getSelectedRow(), i) +  "' AND ";
             
-
         }
+        query += "FECHA_COMPRA = TO_DATE('" + (jt_listPedido.getValueAt(jt_listPedido.getSelectedRow(), 6)).toString().substring(0,10) + "', 'YYYY/MM/DD')"
+                + " AND " + 
+                "C_COMPRADA = " + jt_listPedido.getValueAt(jt_listPedido.getSelectedRow(), 7)
+                + " AND " +
+                "PRECIO_COMPRA = " + jt_listPedido.getValueAt(jt_listPedido.getSelectedRow(), 8);
         
         System.out.println("query: " + query);
         
@@ -3140,7 +3143,7 @@ public class GUI extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) jt_listPedido.getModel();
         model.removeRow(jt_listPedido.getSelectedRow());
         model.fireTableDataChanged();
-        
+      
     }//GEN-LAST:event_bt_deletePedidoActionPerformed
 
     private void bt_saveVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_saveVentaActionPerformed

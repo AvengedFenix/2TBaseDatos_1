@@ -207,7 +207,6 @@
                       <Color blue="88" green="82" red="65" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="solo denle login"/>
                     <Property name="opaque" type="boolean" value="false"/>
                   </Properties>
                   <Events>
@@ -252,7 +251,6 @@
                       <Color blue="88" green="82" red="65" type="rgb"/>
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="solo denle login"/>
                     <Property name="caretColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="88" green="82" red="65" type="rgb"/>
                     </Property>
@@ -3326,7 +3324,7 @@
                           <Component id="bt_showListFabrica" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
                           <Component id="bt_showAddFabrica" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="77" max="32767" attributes="0"/>
+                      <EmptySpace pref="78" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -3414,7 +3412,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                       <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="75" max="32767" attributes="0"/>
+                      <EmptySpace pref="76" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="bt_showListAlmacen" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
                           <Component id="bt_showAddAlmacen" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
@@ -3512,7 +3510,7 @@
                           <Component id="bt_showListPedido" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
                           <Component id="bt_showAddPedido" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="68" max="32767" attributes="0"/>
+                      <EmptySpace pref="69" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -3605,7 +3603,7 @@
                           <Component id="bt_showListExpendio" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
                           <Component id="bt_showAddExpendio" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="78" max="32767" attributes="0"/>
+                      <EmptySpace pref="79" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -3694,7 +3692,7 @@
                           <Component id="bt_showListVenta" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
                           <Component id="bt_showAddVenta" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="72" max="32767" attributes="0"/>
+                      <EmptySpace pref="73" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>

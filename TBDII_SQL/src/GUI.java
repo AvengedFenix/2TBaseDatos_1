@@ -316,7 +316,6 @@ public class GUI extends javax.swing.JFrame {
         tf_username.setFont(new java.awt.Font("Gotham Medium", 0, 14)); // NOI18N
         tf_username.setForeground(new java.awt.Color(101, 130, 136));
         tf_username.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf_username.setText("solo denle login");
         tf_username.setOpaque(false);
         tf_username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -344,7 +343,6 @@ public class GUI extends javax.swing.JFrame {
         tf_password.setFont(new java.awt.Font("Gotham Medium", 0, 14)); // NOI18N
         tf_password.setForeground(new java.awt.Color(101, 130, 136));
         tf_password.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        tf_password.setText("solo denle login");
         tf_password.setCaretColor(new java.awt.Color(101, 130, 136));
         tf_password.setOpaque(false);
         tf_password.addActionListener(new java.awt.event.ActionListener() {
@@ -2175,7 +2173,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bt_showListFabrica, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bt_showAddFabrica, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(77, Short.MAX_VALUE))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
 
         jPanel8.setBorder(fullBorder);
@@ -2228,7 +2226,7 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(60, 60, 60)
                 .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bt_showListAlmacen, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bt_showAddAlmacen, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -2289,7 +2287,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bt_showListPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bt_showAddPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(68, Short.MAX_VALUE))
+                .addContainerGap(69, Short.MAX_VALUE))
         );
 
         jPanel10.setBorder(fullBorder);
@@ -2346,7 +2344,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bt_showListExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bt_showAddExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(78, Short.MAX_VALUE))
+                .addContainerGap(79, Short.MAX_VALUE))
         );
 
         jPanel11.setBorder(fullBorder);
@@ -2400,7 +2398,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bt_showListVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bt_showAddVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(72, Short.MAX_VALUE))
+                .addContainerGap(73, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -2613,16 +2611,25 @@ public class GUI extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        this.setVisible(true);
-        jd_login.setVisible(false);
-        jd_login.dispose();
+
         try {
             databaseCon = DriverManager.getConnection("jdbc:oracle:oci8:@localhost:1521:orcl", tf_username.getText(), tf_password.getText());
             databaseState = databaseCon.createStatement();
+            JOptionPane.showMessageDialog(jd_login, "Conectado con éxito");
+            jd_login.setVisible(false);
+            jd_login.dispose();
+            this.pack();
+            this.setLocationRelativeTo(null);
+            this.setVisible(true);
         } catch (SQLException ex) {
-            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(jd_login, "Usuario o contrasena incorrecta");
+            this.dispose();
+            jd_login.pack();
+            jd_login.setLocationRelativeTo(null);
+            jd_login.setVisible(true);
         }
-        JOptionPane.showMessageDialog(this, "Conectado con éxito");
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void tf_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_passwordActionPerformed
@@ -2863,6 +2870,8 @@ public class GUI extends javax.swing.JFrame {
                 }
             }
         }
+
+        jt_listVenta.setModel(jt_list.getModel());
 
         jd_ventaList.pack();
         jd_ventaList.setVisible(true);
@@ -3356,7 +3365,6 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_saveVentaActionPerformed
 
     private void bt_deleteVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_deleteVentaActionPerformed
-
         String[] columnas = new String[jt_listVenta.getColumnCount()];
 
         for (int i = 0; i < jt_listVenta.getColumnCount(); i++) {
@@ -3364,22 +3372,28 @@ public class GUI extends javax.swing.JFrame {
             System.out.println("name: " + columnas[i]);
         }
 
-        String query = "DELETE FROM ESTANCOS "
+        String query = "DELETE FROM COMPRAS "
                 + "WHERE ";
 
-        for (int i = 0; i < columnas.length; i++) {
-            query += i < columnas.length - 1 ? columnas[i] + " = " + jt_listVenta.getValueAt(jt_listVenta.getSelectedRow(), i) + " AND "
-                    : columnas[i] + " = " + jt_listVenta.getValueAt(jt_listVenta.getSelectedRow(), i);
+        for (int i = 0; i < 6; i++) {
+
+            query += columnas[i] + " = '" + jt_listVenta.getValueAt(jt_listVenta.getSelectedRow(), i) + "' AND ";
 
         }
+        query += "FECHA_COMPRA = TO_DATE('" + (jt_listVenta.getValueAt(jt_listVenta.getSelectedRow(), 6)).toString().substring(0, 10) + "', 'YYYY/MM/DD')"
+                + " AND "
+                + "C_COMPRADA = " + jt_listVenta.getValueAt(jt_listVenta.getSelectedRow(), 7)
+                + " AND "
+                + "PRECIO_COMPRA = " + jt_listVenta.getValueAt(jt_listVenta.getSelectedRow(), 8);
 
         System.out.println("query: " + query);
 
 //        try {
 //            ResultSet rs = databaseState.executeQuery(query);
-//        } catch (Exception e) {
+//        } catch (SQLException e) {
 //            e.printStackTrace();
 //        }
+/*
         ResultSet rs;
         Statement st = null;
         try {
@@ -3396,7 +3410,7 @@ public class GUI extends javax.swing.JFrame {
                     Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
-        }
+        }*/
 
         DefaultTableModel model = (DefaultTableModel) jt_listVenta.getModel();
         model.removeRow(jt_listVenta.getSelectedRow());
@@ -3549,9 +3563,8 @@ public class GUI extends javax.swing.JFrame {
         JTable jt_list = null;
         try {
             st = databaseCon.createStatement();
-            rs = st.executeQuery("select SUM(C_COMPRADA * PRECIO_COMPRA) as Importe_Compras \n"
-                    + "from compras \n"
-                    + "where nif_estanco = '11111' and marca = 'Camel' and fecha_compra >= TO_DATE('1-01-1996','DD/MM/YYYY')");
+            rs = st.executeQuery("SELECT SUM(C_VENDIDA) as Cantidad_Vendida, cig.marca from Cigarrillos cig, Manufactura man, Fabricantes fab, ventas v "
+                    + " where cig.marca = man.marca and man.nombre_fabricante = fab.nombre_fabricante and pais = 'USA' and cig.marca = v.marca and v.clase = cig.clase and cig.marca = 'Camel' group by cig.marca");
             //rs = databaseState.executeQuery("select * from Compras;");
             // It creates and displays the table
             jt_list = new JTable(buildTableModel(rs));
@@ -3621,7 +3634,7 @@ public class GUI extends javax.swing.JFrame {
                 }
             }
         }
-        jt_consultas.setModel(jt_list.getModel());
+        //jt_consultas.setModel(jt_list.getModel());
     }//GEN-LAST:event_bt_consulta6ActionPerformed
 
     private void bt_consulta7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_consulta7ActionPerformed

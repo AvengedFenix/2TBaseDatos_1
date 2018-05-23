@@ -2954,6 +2954,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="C O N S U L T A   1"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bt_consulta1ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="bt_consulta5">
               <Properties>
@@ -2965,6 +2968,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="C O N S U L T A   5"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bt_consulta5ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="bt_consula3">
               <Properties>
@@ -2976,6 +2982,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="C O N S U L T A   3"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bt_consula3ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="bt_consulta2">
               <Properties>
@@ -3001,6 +3010,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="C O N S U L T A   4"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bt_consulta4ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="bt_consulta6">
               <Properties>
@@ -3012,6 +3024,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="C O N S U L T A   6"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bt_consulta6ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="bt_consulta7">
               <Properties>
@@ -3023,6 +3038,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="C O N S U L T A   7"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bt_consulta7ActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="bt_consulta9">
               <Properties>
@@ -3048,6 +3066,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="C O N S U L T A   8"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bt_consulta8ActionPerformed"/>
+              </Events>
             </Component>
             <Container class="javax.swing.JScrollPane" name="jScrollPane7">
               <AuxValues>
@@ -3056,7 +3077,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTable" name="jTable1">
+                <Component class="javax.swing.JTable" name="jt_consultas">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="0" rowCount="0"/>
@@ -3194,7 +3215,7 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace pref="60" max="32767" attributes="0"/>
+                      <EmptySpace pref="61" max="32767" attributes="0"/>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">

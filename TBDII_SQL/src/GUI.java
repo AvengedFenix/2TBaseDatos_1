@@ -1,5 +1,4 @@
 
-
 import java.awt.Color;
 import static java.awt.Color.black;
 import java.sql.Connection;
@@ -227,7 +226,7 @@ public class GUI extends javax.swing.JFrame {
         bt_consulta9 = new javax.swing.JButton();
         bt_consulta8 = new javax.swing.JButton();
         jScrollPane7 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jt_consultas = new javax.swing.JTable();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -1898,14 +1897,29 @@ public class GUI extends javax.swing.JFrame {
         bt_consulta1.setBackground(new java.awt.Color(101, 130, 136));
         bt_consulta1.setFont(new java.awt.Font("Gotham Black", 0, 13)); // NOI18N
         bt_consulta1.setText("C O N S U L T A   1");
+        bt_consulta1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_consulta1ActionPerformed(evt);
+            }
+        });
 
         bt_consulta5.setBackground(new java.awt.Color(101, 130, 136));
         bt_consulta5.setFont(new java.awt.Font("Gotham Black", 0, 13)); // NOI18N
         bt_consulta5.setText("C O N S U L T A   5");
+        bt_consulta5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_consulta5ActionPerformed(evt);
+            }
+        });
 
         bt_consula3.setBackground(new java.awt.Color(101, 130, 136));
         bt_consula3.setFont(new java.awt.Font("Gotham Black", 0, 13)); // NOI18N
         bt_consula3.setText("C O N S U L T A   3");
+        bt_consula3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_consula3ActionPerformed(evt);
+            }
+        });
 
         bt_consulta2.setBackground(new java.awt.Color(101, 130, 136));
         bt_consulta2.setFont(new java.awt.Font("Gotham Black", 0, 13)); // NOI18N
@@ -1919,14 +1933,29 @@ public class GUI extends javax.swing.JFrame {
         bt_consulta4.setBackground(new java.awt.Color(101, 130, 136));
         bt_consulta4.setFont(new java.awt.Font("Gotham Black", 0, 13)); // NOI18N
         bt_consulta4.setText("C O N S U L T A   4");
+        bt_consulta4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_consulta4ActionPerformed(evt);
+            }
+        });
 
         bt_consulta6.setBackground(new java.awt.Color(101, 130, 136));
         bt_consulta6.setFont(new java.awt.Font("Gotham Black", 0, 13)); // NOI18N
         bt_consulta6.setText("C O N S U L T A   6");
+        bt_consulta6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_consulta6ActionPerformed(evt);
+            }
+        });
 
         bt_consulta7.setBackground(new java.awt.Color(101, 130, 136));
         bt_consulta7.setFont(new java.awt.Font("Gotham Black", 0, 13)); // NOI18N
         bt_consulta7.setText("C O N S U L T A   7");
+        bt_consulta7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_consulta7ActionPerformed(evt);
+            }
+        });
 
         bt_consulta9.setBackground(new java.awt.Color(101, 130, 136));
         bt_consulta9.setFont(new java.awt.Font("Gotham Black", 0, 13)); // NOI18N
@@ -1940,8 +1969,13 @@ public class GUI extends javax.swing.JFrame {
         bt_consulta8.setBackground(new java.awt.Color(101, 130, 136));
         bt_consulta8.setFont(new java.awt.Font("Gotham Black", 0, 13)); // NOI18N
         bt_consulta8.setText("C O N S U L T A   8");
+        bt_consulta8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_consulta8ActionPerformed(evt);
+            }
+        });
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jt_consultas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -1949,7 +1983,7 @@ public class GUI extends javax.swing.JFrame {
 
             }
         ));
-        jScrollPane7.setViewportView(jTable1);
+        jScrollPane7.setViewportView(jt_consultas);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -2074,7 +2108,7 @@ public class GUI extends javax.swing.JFrame {
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap(60, Short.MAX_VALUE)
+                .addContainerGap(61, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(68, 68, 68)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2141,7 +2175,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bt_showListFabrica, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bt_showAddFabrica, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addContainerGap(77, Short.MAX_VALUE))
         );
 
         jPanel8.setBorder(fullBorder);
@@ -2194,7 +2228,7 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(60, 60, 60)
                 .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bt_showListAlmacen, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bt_showAddAlmacen, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -2255,7 +2289,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bt_showListPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bt_showAddPedido, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addContainerGap(68, Short.MAX_VALUE))
         );
 
         jPanel10.setBorder(fullBorder);
@@ -2312,7 +2346,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bt_showListExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bt_showAddExpendio, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(77, Short.MAX_VALUE))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
 
         jPanel11.setBorder(fullBorder);
@@ -2366,7 +2400,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bt_showListVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bt_showAddVenta, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(71, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -3014,35 +3048,34 @@ public class GUI extends javax.swing.JFrame {
     private void bt_deleteTabacoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_deleteTabacoActionPerformed
         /*String s = (String) (jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 0));
         System.out.println(s);*/
-        
-        
-        String [] columnas = new String[jt_listTabaco.getColumnCount()];
-        
+
+        String[] columnas = new String[jt_listTabaco.getColumnCount()];
+
         for (int i = 0; i < jt_listTabaco.getColumnCount(); i++) {
             columnas[i] = jt_listTabaco.getColumnName(i);
             System.out.println("name: " + columnas[i]);
         }
-        
+
         String query = "DELETE FROM CIGARRILLOS "
                 + "WHERE ";
-        
-        query   += "MARCA = '" + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 0)
-                + "'" + " AND " + 
-                "FILTRO = '" + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 1)
-                + "'" + " AND "  +
-                "COLOR = '" + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 2)
-                + "'" + " AND " + 
-                "CLASE = '" + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 3)
-                + "'" + " AND " +
-                "MENTOL = '" + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 4)
-                + "'" + " AND " +
-                "NICOTINA = " + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 5)
-                + " AND " +
-                "ALQUITRAN = " + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 6)
-                + " AND " +
-                "PRECIO_COSTO = " + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 7)
-                + " AND " +
-                "PRECIO_VENTA = " + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 8);
+
+        query += "MARCA = '" + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 0)
+                + "'" + " AND "
+                + "FILTRO = '" + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 1)
+                + "'" + " AND "
+                + "COLOR = '" + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 2)
+                + "'" + " AND "
+                + "CLASE = '" + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 3)
+                + "'" + " AND "
+                + "MENTOL = '" + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 4)
+                + "'" + " AND "
+                + "NICOTINA = " + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 5)
+                + " AND "
+                + "ALQUITRAN = " + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 6)
+                + " AND "
+                + "PRECIO_COSTO = " + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 7)
+                + " AND "
+                + "PRECIO_VENTA = " + jt_listTabaco.getValueAt(jt_listTabaco.getSelectedRow(), 8);
         /*for (int i = 0; i < columnas.length; i++) {
            
             boolean isInt = false;
@@ -3062,7 +3095,7 @@ public class GUI extends javax.swing.JFrame {
             }
             
         }*/
-        
+
         System.out.println("query: " + query);
         /*
         try {
@@ -3070,7 +3103,7 @@ public class GUI extends javax.swing.JFrame {
         } catch (SQLException e) {
             e.printStackTrace();
         }*/
-        /*
+ /*
         ResultSet rs;
         Statement st = null;
         try {
@@ -3088,11 +3121,11 @@ public class GUI extends javax.swing.JFrame {
                 }
             }
         }*/
-        
+
         DefaultTableModel model = (DefaultTableModel) jt_listTabaco.getModel();
         model.removeRow(jt_listTabaco.getSelectedRow());
         model.fireTableDataChanged();
-        
+
     }//GEN-LAST:event_bt_deleteTabacoActionPerformed
 
     private void bt_saveFabricaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_saveFabricaActionPerformed
@@ -3100,35 +3133,32 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_saveFabricaActionPerformed
 
     private void bt_deleteFabricaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_deleteFabricaActionPerformed
-        
-        String [] columnas = new String[jt_listFabrica.getColumnCount()];
-        
+
+        String[] columnas = new String[jt_listFabrica.getColumnCount()];
+
         for (int i = 0; i < jt_listFabrica.getColumnCount(); i++) {
             columnas[i] = jt_listFabrica.getColumnName(i);
             System.out.println("name: " + columnas[i]);
         }
-        
+
         String query = "DELETE FROM FABRICANTES "
                 + "WHERE ";
-        
-        
+
         /*if(query.StringUtils.isNumericSpace()){
             
         }*/
-        
         for (int i = 0; i < columnas.length; i++) {
             query += i < columnas.length - 1 ? columnas[i] + " = '" + jt_listFabrica.getValueAt(jt_listFabrica.getSelectedRow(), i) + "' AND "
                     : columnas[i] + " = '" + jt_listFabrica.getValueAt(jt_listFabrica.getSelectedRow(), i) + "'";
         }
 
         System.out.println("query: " + query);
-        
+
 //        try {
 //            ResultSet rs = databaseState.executeQuery(query);
 //        } catch (SQLException e) {
 //            e.printStackTrace();
 //        }
-
         ResultSet rs;
         Statement st = null;
         try {
@@ -3146,11 +3176,11 @@ public class GUI extends javax.swing.JFrame {
                 }
             }
         }
-        
+
         DefaultTableModel model = (DefaultTableModel) jt_listFabrica.getModel();
         model.removeRow(jt_listFabrica.getSelectedRow());
         model.fireTableDataChanged();
-        
+
     }//GEN-LAST:event_bt_deleteFabricaActionPerformed
 
     private void bt_saveExpendioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_saveExpendioActionPerformed
@@ -3158,40 +3188,36 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_saveExpendioActionPerformed
 
     private void bt_deleteExpendioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_deleteExpendioActionPerformed
-        
-        String [] columnas = new String[jt_listExpendio.getColumnCount()];
-        
+
+        String[] columnas = new String[jt_listExpendio.getColumnCount()];
+
         for (int i = 0; i < jt_listExpendio.getColumnCount(); i++) {
             columnas[i] = jt_listExpendio.getColumnName(i);
             System.out.println("name: " + columnas[i]);
         }
-        
+
         String query = "DELETE FROM ESTANCOS "
                 + "WHERE "
-                
-                + "NIF_ESTANCO = '" + jt_listExpendio.getValueAt(jt_listExpendio.getSelectedRow(), 0) 
-                + "' AND " 
+                + "NIF_ESTANCO = '" + jt_listExpendio.getValueAt(jt_listExpendio.getSelectedRow(), 0)
+                + "' AND "
                 + "EXPENDEDURIA = " + jt_listExpendio.getValueAt(jt_listExpendio.getSelectedRow(), 1)
                 + " AND "
                 + "CP_ESTANCO = " + jt_listExpendio.getValueAt(jt_listExpendio.getSelectedRow(), 2)
                 + " AND ";
-        
-        
-        
+
         for (int i = 3; i < columnas.length; i++) {
             query += i < columnas.length - 1 ? columnas[i] + " = '" + jt_listExpendio.getValueAt(jt_listExpendio.getSelectedRow(), i) + "' AND "
                     : columnas[i] + " = '" + jt_listExpendio.getValueAt(jt_listExpendio.getSelectedRow(), i) + "'";
-            
+
         }
-        
+
         System.out.println("query: " + query);
-        
+
 //        try {
 //            ResultSet rs = databaseState.executeQuery(query);
 //        } catch (SQLException e) {
 //            e.printStackTrace();
 //        }
-
         ResultSet rs;
         Statement st = null;
         try {
@@ -3209,41 +3235,40 @@ public class GUI extends javax.swing.JFrame {
                 }
             }
         }
-        
+
         DefaultTableModel model = (DefaultTableModel) jt_listExpendio.getModel();
         model.removeRow(jt_listExpendio.getSelectedRow());
         model.fireTableDataChanged();
     }//GEN-LAST:event_bt_deleteExpendioActionPerformed
 
     private void bt_saveAlmacenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_saveAlmacenActionPerformed
-        
+
     }//GEN-LAST:event_bt_saveAlmacenActionPerformed
 
     private void bt_deleteAlmacenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_deleteAlmacenActionPerformed
-        String [] columnas = new String[jt_listAlmacen.getColumnCount()];
-        
+        String[] columnas = new String[jt_listAlmacen.getColumnCount()];
+
         for (int i = 0; i < jt_listAlmacen.getColumnCount(); i++) {
             columnas[i] = jt_listAlmacen.getColumnName(i);
             System.out.println("name: " + columnas[i]);
         }
-        
+
         String query = "DELETE FROM ALMACENES "
                 + "WHERE ";
-        
+
         for (int i = 0; i < columnas.length; i++) {
             query += i < columnas.length - 1 ? columnas[i] + " = '" + jt_listAlmacen.getValueAt(jt_listAlmacen.getSelectedRow(), i) + "' AND "
                     : columnas[i] + " = " + jt_listAlmacen.getValueAt(jt_listAlmacen.getSelectedRow(), i);
-            
+
         }
-        
+
         System.out.println("query: " + query);
-        
+
 //        try {
 //            ResultSet rs = databaseState.executeQuery(query);
 //        } catch (SQLException e) {
 //            e.printStackTrace();
 //        }
-
         ResultSet rs;
         Statement st = null;
         try {
@@ -3261,11 +3286,11 @@ public class GUI extends javax.swing.JFrame {
                 }
             }
         }
-        
+
         DefaultTableModel model = (DefaultTableModel) jt_listAlmacen.getModel();
         model.removeRow(jt_listAlmacen.getSelectedRow());
         model.fireTableDataChanged();
-        
+
     }//GEN-LAST:event_bt_deleteAlmacenActionPerformed
 
     private void bt_savePedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_savePedidoActionPerformed
@@ -3273,36 +3298,35 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_savePedidoActionPerformed
 
     private void bt_deletePedidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_deletePedidoActionPerformed
-        
-        String [] columnas = new String[jt_listPedido.getColumnCount()];
-        
+
+        String[] columnas = new String[jt_listPedido.getColumnCount()];
+
         for (int i = 0; i < jt_listPedido.getColumnCount(); i++) {
             columnas[i] = jt_listPedido.getColumnName(i);
             System.out.println("name: " + columnas[i]);
         }
-        
+
         String query = "DELETE FROM COMPRAS "
                 + "WHERE ";
-        
+
         for (int i = 0; i < 6; i++) {
-                
-           query +=  columnas[i] + " = '"  + jt_listPedido.getValueAt(jt_listPedido.getSelectedRow(), i) +  "' AND ";
-            
+
+            query += columnas[i] + " = '" + jt_listPedido.getValueAt(jt_listPedido.getSelectedRow(), i) + "' AND ";
+
         }
-        query += "FECHA_COMPRA = TO_DATE('" + (jt_listPedido.getValueAt(jt_listPedido.getSelectedRow(), 6)).toString().substring(0,10) + "', 'YYYY/MM/DD')"
-                + " AND " + 
-                "C_COMPRADA = " + jt_listPedido.getValueAt(jt_listPedido.getSelectedRow(), 7)
-                + " AND " +
-                "PRECIO_COMPRA = " + jt_listPedido.getValueAt(jt_listPedido.getSelectedRow(), 8);
-        
+        query += "FECHA_COMPRA = TO_DATE('" + (jt_listPedido.getValueAt(jt_listPedido.getSelectedRow(), 6)).toString().substring(0, 10) + "', 'YYYY/MM/DD')"
+                + " AND "
+                + "C_COMPRADA = " + jt_listPedido.getValueAt(jt_listPedido.getSelectedRow(), 7)
+                + " AND "
+                + "PRECIO_COMPRA = " + jt_listPedido.getValueAt(jt_listPedido.getSelectedRow(), 8);
+
         System.out.println("query: " + query);
-        
+
 //        try {
 //            ResultSet rs = databaseState.executeQuery(query);
 //        } catch (SQLException e) {
 //            e.printStackTrace();
 //        }
-
         ResultSet rs;
         Statement st = null;
         try {
@@ -3320,11 +3344,11 @@ public class GUI extends javax.swing.JFrame {
                 }
             }
         }
-        
+
         DefaultTableModel model = (DefaultTableModel) jt_listPedido.getModel();
         model.removeRow(jt_listPedido.getSelectedRow());
         model.fireTableDataChanged();
-      
+
     }//GEN-LAST:event_bt_deletePedidoActionPerformed
 
     private void bt_saveVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_saveVentaActionPerformed
@@ -3332,31 +3356,30 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_saveVentaActionPerformed
 
     private void bt_deleteVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_deleteVentaActionPerformed
-        
-        String [] columnas = new String[jt_listVenta.getColumnCount()];
-        
+
+        String[] columnas = new String[jt_listVenta.getColumnCount()];
+
         for (int i = 0; i < jt_listVenta.getColumnCount(); i++) {
             columnas[i] = jt_listVenta.getColumnName(i);
             System.out.println("name: " + columnas[i]);
         }
-        
+
         String query = "DELETE FROM ESTANCOS "
                 + "WHERE ";
-        
+
         for (int i = 0; i < columnas.length; i++) {
             query += i < columnas.length - 1 ? columnas[i] + " = " + jt_listVenta.getValueAt(jt_listVenta.getSelectedRow(), i) + " AND "
                     : columnas[i] + " = " + jt_listVenta.getValueAt(jt_listVenta.getSelectedRow(), i);
-            
+
         }
-        
+
         System.out.println("query: " + query);
-        
+
 //        try {
 //            ResultSet rs = databaseState.executeQuery(query);
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
-
         ResultSet rs;
         Statement st = null;
         try {
@@ -3374,11 +3397,11 @@ public class GUI extends javax.swing.JFrame {
                 }
             }
         }
-        
+
         DefaultTableModel model = (DefaultTableModel) jt_listVenta.getModel();
         model.removeRow(jt_listVenta.getSelectedRow());
         model.fireTableDataChanged();
-        
+
     }//GEN-LAST:event_bt_deleteVentaActionPerformed
 
     private void bt_dashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_dashboardActionPerformed
@@ -3401,11 +3424,268 @@ public class GUI extends javax.swing.JFrame {
 
     private void bt_consulta9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_consulta9ActionPerformed
         // TODO add your handling code here:
+        ResultSet rs;
+        Statement st = null;
+        //JTable jt_list = null;
+        JTable jt_list = null;
+        try {
+            st = databaseCon.createStatement();
+            rs = st.executeQuery("select SUM(C_COMPRADA * PRECIO_COMPRA) as Importe_Compras \n"
+                    + "from compras \n"
+                    + "where nif_estanco = '11111' and marca = 'Camel' and fecha_compra >= TO_DATE('1-01-1996','DD/MM/YYYY')");
+            //rs = databaseState.executeQuery("select * from Compras;");
+            // It creates and displays the table
+            jt_list = new JTable(buildTableModel(rs));
+        } catch (SQLException ex) {
+            //JDBCTutorialUtilities.printSQLException(ex);
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            if (st != null) {
+                try {
+                    st.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+        jt_consultas.setModel(jt_list.getModel());
     }//GEN-LAST:event_bt_consulta9ActionPerformed
 
     private void bt_consulta2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_consulta2ActionPerformed
         // TODO add your handling code here:
+        ResultSet rs;
+        Statement st = null;
+        //JTable jt_list = null;
+        JTable jt_list = null;
+        try {
+            st = databaseCon.createStatement();
+            rs = st.executeQuery("select SUM(C_COMPRADA * PRECIO_COMPRA) as Importe_Compras \n"
+                    + "from compras \n"
+                    + "where nif_estanco = '11111' and marca = 'Camel' and fecha_compra >= TO_DATE('1-01-1996','DD/MM/YYYY')");
+            //rs = databaseState.executeQuery("select * from Compras;");
+            // It creates and displays the table
+            jt_list = new JTable(buildTableModel(rs));
+        } catch (SQLException ex) {
+            //JDBCTutorialUtilities.printSQLException(ex);
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            if (st != null) {
+                try {
+                    st.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+        jt_consultas.setModel(jt_list.getModel());
     }//GEN-LAST:event_bt_consulta2ActionPerformed
+
+    private void bt_consulta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_consulta1ActionPerformed
+        // TODO add your handling code here:
+        ResultSet rs;
+        Statement st = null;
+        //JTable jt_list = null;
+        JTable jt_list = null;
+        try {
+            st = databaseCon.createStatement();
+            rs = st.executeQuery("SELECT DISTINCT cig.marca, fab.pais from Cigarrillos cig, Manufactura man, Fabricantes fab\n"
+                    + "  where cig.marca = man.marca and man.nombre_fabricante = fab.nombre_fabricante and pais = 'USA'");
+            //rs = databaseState.executeQuery("select * from Compras;");
+            // It creates and displays the table
+            jt_list = new JTable(buildTableModel(rs));
+        } catch (SQLException ex) {
+            //JDBCTutorialUtilities.printSQLException(ex);
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            if (st != null) {
+                try {
+                    st.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+        jt_consultas.setModel(jt_list.getModel());
+
+    }//GEN-LAST:event_bt_consulta1ActionPerformed
+
+    private void bt_consula3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_consula3ActionPerformed
+        // TODO add your handling code here:
+        ResultSet rs;
+        Statement st = null;
+        //JTable jt_list = null;
+        JTable jt_list = null;
+        try {
+            st = databaseCon.createStatement();
+            rs = st.executeQuery("select SUM(C_VENDIDA * PRECIO_VENTA) as Importe_Ducados_Madrid \n"
+                    + "from ventas v \n"
+                    + "inner join estancos e on v.NIF_ESTANCO = e.NIF_ESTANCO where  marca = 'Ducados' and provincia_estanco = 'Madrid'");
+            //rs = databaseState.executeQuery("select * from Compras;");
+            // It creates and displays the table
+            jt_list = new JTable(buildTableModel(rs));
+        } catch (SQLException ex) {
+            //JDBCTutorialUtilities.printSQLException(ex);
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            if (st != null) {
+                try {
+                    st.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+        jt_consultas.setModel(jt_list.getModel());
+
+    }//GEN-LAST:event_bt_consula3ActionPerformed
+
+    private void bt_consulta4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_consulta4ActionPerformed
+        // TODO add your handling code here:
+
+        //FALTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        ResultSet rs;
+        Statement st = null;
+        //JTable jt_list = null;
+        JTable jt_list = null;
+        try {
+            st = databaseCon.createStatement();
+            rs = st.executeQuery("select SUM(C_COMPRADA * PRECIO_COMPRA) as Importe_Compras \n"
+                    + "from compras \n"
+                    + "where nif_estanco = '11111' and marca = 'Camel' and fecha_compra >= TO_DATE('1-01-1996','DD/MM/YYYY')");
+            //rs = databaseState.executeQuery("select * from Compras;");
+            // It creates and displays the table
+            jt_list = new JTable(buildTableModel(rs));
+        } catch (SQLException ex) {
+            //JDBCTutorialUtilities.printSQLException(ex);
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            if (st != null) {
+                try {
+                    st.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+        jt_consultas.setModel(jt_list.getModel());
+    }//GEN-LAST:event_bt_consulta4ActionPerformed
+
+    private void bt_consulta5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_consulta5ActionPerformed
+        // TODO add your handling code here:
+        ResultSet rs;
+        Statement st = null;
+        //JTable jt_list = null;
+        JTable jt_list = null;
+        try {
+            st = databaseCon.createStatement();
+            rs = st.executeQuery("select SUM(C_VENDIDA * PRECIO_VENTA) from ventas where marca = 'Winston' and fecha_venta = TO_DATE('22/08/1995', 'DD/MM/YYYY')");
+            //rs = databaseState.executeQuery("select * from Compras;");
+            // It creates and displays the table
+            jt_list = new JTable(buildTableModel(rs));
+        } catch (SQLException ex) {
+            //JDBCTutorialUtilities.printSQLException(ex);
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            if (st != null) {
+                try {
+                    st.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+        jt_consultas.setModel(jt_list.getModel());
+    }//GEN-LAST:event_bt_consulta5ActionPerformed
+
+    private void bt_consulta6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_consulta6ActionPerformed
+        // TODO add your handling code here:
+        ResultSet rs;
+        Statement st = null;
+        //JTable jt_list = null;
+        JTable jt_list = null;
+        try {
+            st = databaseCon.createStatement();
+            rs = st.executeQuery("AlTER TABLE CIGARRILLOS ADD COLUMN M_CALIDAD int");
+            //rs = databaseState.executeQuery("select * from Compras;");
+            // It creates and displays the table
+            jt_list = new JTable(buildTableModel(rs));
+        } catch (SQLException ex) {
+            //JDBCTutorialUtilities.printSQLException(ex);
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            if (st != null) {
+                try {
+                    st.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+        jt_consultas.setModel(jt_list.getModel());
+    }//GEN-LAST:event_bt_consulta6ActionPerformed
+
+    private void bt_consulta7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_consulta7ActionPerformed
+        // TODO add your handling code here:
+        ResultSet rs;
+        Statement st = null;
+        //JTable jt_list = null;
+        JTable jt_list = null;
+        try {
+            st = databaseCon.createStatement();
+            rs = st.executeQuery("ALTER TABLE ALMACENES \n"
+                    + "	MODIFY UNIDADES NUMBER(5,0) CHECK (UNIDADES > 999)");
+            //rs = databaseState.executeQuery("select * from Compras;");
+            // It creates and displays the table
+            jt_list = new JTable(buildTableModel(rs));
+        } catch (SQLException ex) {
+            //JDBCTutorialUtilities.printSQLException(ex);
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            if (st != null) {
+                try {
+                    st.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+        jt_consultas.setModel(jt_list.getModel());
+    }//GEN-LAST:event_bt_consulta7ActionPerformed
+
+    private void bt_consulta8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_consulta8ActionPerformed
+        // TODO add your handling code here:
+        ResultSet rs;
+        Statement st = null;
+        //JTable jt_list = null;
+        JTable jt_list = null;
+        try {
+            st = databaseCon.createStatement();
+            rs = st.executeQuery("CREATE OR REPLACE TRIGGER trig_Estanco before insert\n"
+                    + "on ESTANCOS for each row\n"
+                    + "when(LENGTH(new.NIF_ESTANCO) < 12)\n"
+                    + "declare    \n"
+                    + "    excpt EXCEPTION;\n"
+                    + "    PRAGMA EXCEPTION_INIT( excpt, -20001 );\n"
+                    + "begin \n"
+                    + "    raise excpt;\n"
+                    + "end");
+            //rs = databaseState.executeQuery("select * from Compras;");
+            // It creates and displays the table
+            jt_list = new JTable(buildTableModel(rs));
+        } catch (SQLException ex) {
+            //JDBCTutorialUtilities.printSQLException(ex);
+            Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            if (st != null) {
+                try {
+                    st.close();
+                } catch (SQLException ex) {
+                    Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+        jt_consultas.setModel(jt_list.getModel());
+    }//GEN-LAST:event_bt_consulta8ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -3601,7 +3881,6 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JDialog jd_almacenAdd;
     private javax.swing.JDialog jd_almacenList;
     private javax.swing.JDialog jd_consultas;
@@ -3618,6 +3897,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JDialog jd_ventaList;
     private com.toedter.calendar.JDateChooser jdc_fechaPedido;
     private com.toedter.calendar.JDateChooser jdc_fechaVenta;
+    private javax.swing.JTable jt_consultas;
     private javax.swing.JTable jt_listAlmacen;
     private javax.swing.JTable jt_listExpendio;
     private javax.swing.JTable jt_listFabrica;

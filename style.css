@@ -17,3 +17,54 @@
 #bt-con {
     margin: 40px;
 }
+
+@font-face {
+    font-family: GothamPro;
+    src: url(fonts/GothamPro.eot);
+    src: url(fonts/GothamPro.ttf);
+}
+
+@font-face {
+    font-family: GothamPro-Black;
+    src: url(fonts/GothamPro-Black.eot);
+    src: url(fonts/GothamPro-Black.ttf);
+}
+
+@font-face {
+    font-family: GothamPro-Light;
+    src: url(fonts/GothamPro-Light.eot);
+    src: url(fonts/GothamPro-Light.ttf);
+}
+
+.navbar-brand {
+    font-family: GothamPro-Black;
+}
+
+#navIcon {
+    margin-right: 10px;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 30px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }

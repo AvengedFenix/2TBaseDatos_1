@@ -1,6 +1,7 @@
 #navBar {
     --font-family: 'Raleway', sans-serif;
-    background-color: darkcyan;
+    background: linear-gradient(to right, #c04848, #480048);
+    height: 80px;
 }
 
 #mainText {
@@ -12,6 +13,11 @@
 
 #conMain {
     margin: 100px;
+}
+
+#navTitle {
+    font-weight: 900;
+    margin-right: 40px;
 }
 
 #bt-con {
@@ -48,7 +54,8 @@
     font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;
-    font-size: 30px;  /* Preferred icon size */
+    font-size: 30px;
+    /* Preferred icon size */
     display: inline-block;
     line-height: 1;
     text-transform: none;
@@ -56,15 +63,13 @@
     word-wrap: normal;
     white-space: nowrap;
     direction: ltr;
-  
+    color: rgba(255, 255, 255, 1);
     /* Support for all WebKit browsers. */
     -webkit-font-smoothing: antialiased;
     /* Support for Safari and Chrome. */
     text-rendering: optimizeLegibility;
-  
     /* Support for Firefox. */
     -moz-osx-font-smoothing: grayscale;
-  
     /* Support for IE. */
     font-feature-settings: 'liga';
-  }
+}

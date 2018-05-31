@@ -14,6 +14,11 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_orange-red.min.css" />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
 
 </head>
@@ -21,7 +26,7 @@
 <body>
     <div id="container" style="font-family: Montserrat">
         <nav id="navBar" class="navbar navbar-expand-lg navbar-light bg-light" style="background-color:cadetblue;">
-            <a class="navbar-brand" style="font-weight: 800" href="#">T A B A Q U E R A</a>
+            <a class="navbar-brand" style="font-weight: 900" href="#">T A B A Q U E R A</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -59,7 +64,10 @@
                 </form>
             </div>
         </nav>
-
-        <textarea class="mdl-textfield__input mx-auto" type="text" rows="6" id="mainText" placeholder="Inserte su consulta aqui..."></textarea>
+        <div align="center" id="conMain">
+            <textarea class="mx-auto" type="text" rows="6" id="mainText" placeholder="Inserte su consulta aqui..."></textarea>
+           <br>
+            <button id="bt-con" type="button" class="btn btn-outline-dark">EJECUTAR</button>
+        </div>
     </div>
 </body>

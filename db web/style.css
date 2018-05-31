@@ -1,0 +1,19 @@
+#navBar {
+    --font-family: 'Raleway', sans-serif;
+    background-color: darkcyan;
+}
+
+#mainText {
+    margin: 20px;
+    width: 600px;
+    padding: 20px;
+    border-color: rgb(255, 255, 255, 0.5);
+}
+
+#conMain {
+    margin: 100px;
+}
+
+#bt-con {
+    margin: 40px;
+}

@@ -1,0 +1,20 @@
+Orden de ejecución para la Base de Datos en MySQL
+
+	1. Arrastrar CREATE TABLES.sql
+	2. Arrastrar INSERTS.sql
+	3. Arrastrar ProcemientosMySQL.sql
+	4. Arrastrar procedimentoActualizarCompras.sql
+	5. Arrastrar procAddVentas.sql
+	
+En la consola de Php MyAdmin
+
+	1. Ejecutar actCOMPRAS()
+	2. Ejecutar actVentas()
+	3. Ejecutar cada consulta como
+		call consulta1()
+		call consulta2()
+		call consulta3()
+		call consulta4()
+		call consulta5()
+		call consulta6()
+		call consulta9()

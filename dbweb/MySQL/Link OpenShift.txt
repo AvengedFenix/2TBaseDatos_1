@@ -1,0 +1,6 @@
+Link de PhP MyAdmin alojada en OpenShift.com
+
+http://phpmyadmin-cigarrillos.7e14.starter-us-west-2.openshiftapps.com/db_sql.php?db=cigarrillos
+
+	Usuario: root
+	Contraseña: admin
